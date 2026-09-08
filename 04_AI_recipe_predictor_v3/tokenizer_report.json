@@ -1,0 +1,66 @@
+{
+  "total_lines": 12604,
+  "unique_batches": 660,
+  "unique_chemicals": 196,
+  "classification_rate_pct": 99.98,
+  "class_distribution": {
+    "DYE_BLUE": 29,
+    "PRETREAT_SCOUR": 27,
+    "DYE_RED": 23,
+    "DYE_YELLOW": 20,
+    "SEQUESTRANT": 17,
+    "LEVELER": 16,
+    "ENZYME": 10,
+    "SOFTENER": 10,
+    "DYE_BLACK": 9,
+    "DYE_OTHER": 9,
+    "OBA": 7,
+    "WASH_OFF": 4,
+    "DYE_ORANGE": 3,
+    "ACID_pH": 2,
+    "REDUCTION_CLEANER": 2,
+    "PRETREAT_BLEACH": 2,
+    "ALKALI_CAUSTIC": 2,
+    "SALT": 1,
+    "ALKALI_SODA": 1,
+    "DYE_VIOLET": 1,
+    "UNCLASSIFIED": 1
+  },
+  "shade_distribution": {
+    "LIGHT": 381,
+    "DARK": 183,
+    "MEDIUM": 60,
+    "UNKNOWN": 36
+  },
+  "color_depth_distribution": {
+    "LIGHT": 300,
+    "SPECIAL(B/R)": 118,
+    "WHITE": 81,
+    "MEDIUM": 60,
+    "EXTRADARK": 27,
+    "DARK": 26,
+    "RBLUEBLACK": 20,
+    "WASH": 14,
+    "S": 12,
+    "ROYEL": 2
+  },
+  "pid_family_distribution": {
+    "Cotton": 372,
+    "PES/PC/CVC Blend": 244,
+    "2-Part (PES+Cotton)": 44
+  },
+  "fabric_qty_stats": {
+    "mean": 551.0,
+    "min": 2.1,
+    "max": 1420.0,
+    "notna": 660
+  },
+  "lr_stats": {
+    "mean": 7.05,
+    "min": 3.5,
+    "max": 40.0
+  },
+  "unclassified_chemicals": [
+    "SODIUM BI CORBONATE"
+  ]
+}

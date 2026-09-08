@@ -1,0 +1,53 @@
+# ============================================================
+# Smart Dyeing AI Project — .gitignore
+# ============================================================
+
+# Proprietary production data — NEVER commit
+*.csv
+*.xlsx
+*.xls
+*.sqlite
+*.db
+*.h5
+*.pkl
+*.parquet
+
+# Raw batch HTML records (proprietary, not for distribution)
+*.html
+raw_data/
+batch_html/
+All_Batches_Raw_Recipes/
+dbl/
+scrapers/
+
+# Trained model artefacts (too large)
+models/
+*.pt
+*.pth
+saved_model/
+
+# Generated dashboards and reports (build artifacts)
+*_Dashboard.html
+*_Baseline_Dashboard.html
+figs_*/
+charts/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Backup files
+*_ORIGINAL_BACKUP.py
+*BACKUP*

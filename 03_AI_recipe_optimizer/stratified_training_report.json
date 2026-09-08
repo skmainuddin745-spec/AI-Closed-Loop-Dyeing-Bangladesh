@@ -1,0 +1,554 @@
+﻿{
+  "generated": "2026-09-04T20:19:07",
+  "stratified_models_saved": 15,
+  "physical_violations_before_clamp": 594,
+  "metrics": {
+    "Unit_A": {
+      "Salt_g_per_kg": {
+        "Light_best": "RandomForest",
+        "Light": {
+          "Ridge": {
+            "MAE": 166.057,
+            "RMSE": 205.957,
+            "MAPE_pct": 109.7,
+            "R2": -0.0527,
+            "train_n": 82163,
+            "test_n": 20495
+          },
+          "XGBoost": {
+            "MAE": 103.652,
+            "RMSE": 137.083,
+            "MAPE_pct": 65.05,
+            "R2": 0.5336,
+            "train_n": 82163,
+            "test_n": 20495
+          },
+          "LightGBM": {
+            "MAE": 104.833,
+            "RMSE": 138.105,
+            "MAPE_pct": 66.0,
+            "R2": 0.5266,
+            "train_n": 82163,
+            "test_n": 20495
+          },
+          "RandomForest": {
+            "MAE": 103.033,
+            "RMSE": 137.563,
+            "MAPE_pct": 64.66,
+            "R2": 0.5304,
+            "train_n": 82163,
+            "test_n": 20495
+          }
+        },
+        "Dark_best": "XGBoost",
+        "Dark": {
+          "Ridge": {
+            "MAE": 79.668,
+            "RMSE": 103.087,
+            "MAPE_pct": 23.95,
+            "R2": 0.301,
+            "train_n": 12952,
+            "test_n": 3250
+          },
+          "XGBoost": {
+            "MAE": 64.997,
+            "RMSE": 87.949,
+            "MAPE_pct": 19.3,
+            "R2": 0.4912,
+            "train_n": 12952,
+            "test_n": 3250
+          },
+          "LightGBM": {
+            "MAE": 65.104,
+            "RMSE": 88.099,
+            "MAPE_pct": 19.49,
+            "R2": 0.4895,
+            "train_n": 12952,
+            "test_n": 3250
+          },
+          "RandomForest": {
+            "MAE": 65.312,
+            "RMSE": 88.753,
+            "MAPE_pct": 19.63,
+            "R2": 0.4819,
+            "train_n": 12952,
+            "test_n": 3250
+          }
+        },
+        "White_best": "XGBoost",
+        "White": {
+          "Ridge": {
+            "MAE": 124.531,
+            "RMSE": 151.772,
+            "MAPE_pct": 87.59,
+            "R2": 0.1115,
+            "train_n": 420,
+            "test_n": 91
+          },
+          "XGBoost": {
+            "MAE": 66.802,
+            "RMSE": 113.399,
+            "MAPE_pct": 37.06,
+            "R2": 0.504,
+            "train_n": 420,
+            "test_n": 91
+          },
+          "LightGBM": {
+            "MAE": 77.059,
+            "RMSE": 119.766,
+            "MAPE_pct": 43.85,
+            "R2": 0.4467,
+            "train_n": 420,
+            "test_n": 91
+          },
+          "RandomForest": {
+            "MAE": 91.818,
+            "RMSE": 135.578,
+            "MAPE_pct": 55.62,
+            "R2": 0.291,
+            "train_n": 420,
+            "test_n": 91
+          }
+        }
+      },
+      "Dye_g_per_kg": {
+        "Light_best": "XGBoost",
+        "Light": {
+          "Ridge": {
+            "MAE": 28.283,
+            "RMSE": 34.524,
+            "MAPE_pct": 473.37,
+            "R2": 0.0581,
+            "train_n": 59256,
+            "test_n": 14735
+          },
+          "XGBoost": {
+            "MAE": 19.144,
+            "RMSE": 25.915,
+            "MAPE_pct": 251.39,
+            "R2": 0.4693,
+            "train_n": 59256,
+            "test_n": 14735
+          },
+          "LightGBM": {
+            "MAE": 19.402,
+            "RMSE": 26.153,
+            "MAPE_pct": 256.88,
+            "R2": 0.4595,
+            "train_n": 59256,
+            "test_n": 14735
+          },
+          "RandomForest": {
+            "MAE": 19.421,
+            "RMSE": 26.411,
+            "MAPE_pct": 257.39,
+            "R2": 0.4488,
+            "train_n": 59256,
+            "test_n": 14735
+          }
+        },
+        "Dark_best": "XGBoost",
+        "Dark": {
+          "Ridge": {
+            "MAE": 19.316,
+            "RMSE": 24.026,
+            "MAPE_pct": 80.06,
+            "R2": 0.2281,
+            "train_n": 12816,
+            "test_n": 3220
+          },
+          "XGBoost": {
+            "MAE": 14.125,
+            "RMSE": 19.162,
+            "MAPE_pct": 61.68,
+            "R2": 0.509,
+            "train_n": 12816,
+            "test_n": 3220
+          },
+          "LightGBM": {
+            "MAE": 14.134,
+            "RMSE": 19.118,
+            "MAPE_pct": 61.73,
+            "R2": 0.5113,
+            "train_n": 12816,
+            "test_n": 3220
+          },
+          "RandomForest": {
+            "MAE": 14.365,
+            "RMSE": 19.615,
+            "MAPE_pct": 62.7,
+            "R2": 0.4855,
+            "train_n": 12816,
+            "test_n": 3220
+          }
+        }
+      },
+      "Alkali_g_per_kg": {
+        "Light_best": "XGBoost",
+        "Light": {
+          "Ridge": {
+            "MAE": 43.488,
+            "RMSE": 65.022,
+            "MAPE_pct": 51.84,
+            "R2": -0.1836,
+            "train_n": 84479,
+            "test_n": 21113
+          },
+          "XGBoost": {
+            "MAE": 35.159,
+            "RMSE": 43.787,
+            "MAPE_pct": 40.9,
+            "R2": 0.4633,
+            "train_n": 84479,
+            "test_n": 21113
+          },
+          "LightGBM": {
+            "MAE": 35.338,
+            "RMSE": 43.865,
+            "MAPE_pct": 41.18,
+            "R2": 0.4614,
+            "train_n": 84479,
+            "test_n": 21113
+          },
+          "RandomForest": {
+            "MAE": 35.601,
+            "RMSE": 44.294,
+            "MAPE_pct": 41.31,
+            "R2": 0.4508,
+            "train_n": 84479,
+            "test_n": 21113
+          }
+        },
+        "Dark_best": "XGBoost",
+        "Dark": {
+          "Ridge": {
+            "MAE": 42.619,
+            "RMSE": 49.48,
+            "MAPE_pct": 52.81,
+            "R2": 0.151,
+            "train_n": 13076,
+            "test_n": 3269
+          },
+          "XGBoost": {
+            "MAE": 30.669,
+            "RMSE": 40.46,
+            "MAPE_pct": 36.64,
+            "R2": 0.4323,
+            "train_n": 13076,
+            "test_n": 3269
+          },
+          "LightGBM": {
+            "MAE": 30.807,
+            "RMSE": 40.471,
+            "MAPE_pct": 36.77,
+            "R2": 0.432,
+            "train_n": 13076,
+            "test_n": 3269
+          },
+          "RandomForest": {
+            "MAE": 31.79,
+            "RMSE": 41.424,
+            "MAPE_pct": 39.22,
+            "R2": 0.4049,
+            "train_n": 13076,
+            "test_n": 3269
+          }
+        },
+        "White_best": "XGBoost",
+        "White": {
+          "Ridge": {
+            "MAE": 8.398,
+            "RMSE": 14.279,
+            "MAPE_pct": 49.21,
+            "R2": 0.428,
+            "train_n": 17341,
+            "test_n": 4298
+          },
+          "XGBoost": {
+            "MAE": 6.473,
+            "RMSE": 11.135,
+            "MAPE_pct": 37.29,
+            "R2": 0.6521,
+            "train_n": 17341,
+            "test_n": 4298
+          },
+          "LightGBM": {
+            "MAE": 6.601,
+            "RMSE": 11.281,
+            "MAPE_pct": 37.84,
+            "R2": 0.643,
+            "train_n": 17341,
+            "test_n": 4298
+          },
+          "RandomForest": {
+            "MAE": 6.553,
+            "RMSE": 11.469,
+            "MAPE_pct": 37.49,
+            "R2": 0.6309,
+            "train_n": 17341,
+            "test_n": 4298
+          }
+        }
+      }
+    },
+    "Unit_D": {
+      "Salt_g_per_kg": {
+        "Light_best": "XGBoost",
+        "Light": {
+          "Ridge": {
+            "MAE": 126.989,
+            "RMSE": 161.29,
+            "MAPE_pct": 85.59,
+            "R2": 0.2646,
+            "train_n": 31866,
+            "test_n": 8020
+          },
+          "XGBoost": {
+            "MAE": 87.165,
+            "RMSE": 120.481,
+            "MAPE_pct": 56.46,
+            "R2": 0.5897,
+            "train_n": 31866,
+            "test_n": 8020
+          },
+          "LightGBM": {
+            "MAE": 88.201,
+            "RMSE": 121.925,
+            "MAPE_pct": 57.03,
+            "R2": 0.5798,
+            "train_n": 31866,
+            "test_n": 8020
+          },
+          "RandomForest": {
+            "MAE": 87.823,
+            "RMSE": 122.836,
+            "MAPE_pct": 56.58,
+            "R2": 0.5735,
+            "train_n": 31866,
+            "test_n": 8020
+          }
+        },
+        "Dark_best": "LightGBM",
+        "Dark": {
+          "Ridge": {
+            "MAE": 96.507,
+            "RMSE": 114.556,
+            "MAPE_pct": 32.78,
+            "R2": 0.1682,
+            "train_n": 4626,
+            "test_n": 1156
+          },
+          "XGBoost": {
+            "MAE": 64.425,
+            "RMSE": 86.052,
+            "MAPE_pct": 24.86,
+            "R2": 0.5306,
+            "train_n": 4626,
+            "test_n": 1156
+          },
+          "LightGBM": {
+            "MAE": 66.7,
+            "RMSE": 87.258,
+            "MAPE_pct": 24.37,
+            "R2": 0.5174,
+            "train_n": 4626,
+            "test_n": 1156
+          },
+          "RandomForest": {
+            "MAE": 69.209,
+            "RMSE": 89.591,
+            "MAPE_pct": 26.48,
+            "R2": 0.4912,
+            "train_n": 4626,
+            "test_n": 1156
+          }
+        }
+      },
+      "Dye_g_per_kg": {
+        "Light_best": "XGBoost",
+        "Light": {
+          "Ridge": {
+            "MAE": 20.269,
+            "RMSE": 26.141,
+            "MAPE_pct": 390.73,
+            "R2": 0.1471,
+            "train_n": 18935,
+            "test_n": 4807
+          },
+          "XGBoost": {
+            "MAE": 13.181,
+            "RMSE": 18.631,
+            "MAPE_pct": 207.79,
+            "R2": 0.5668,
+            "train_n": 18935,
+            "test_n": 4807
+          },
+          "LightGBM": {
+            "MAE": 13.353,
+            "RMSE": 18.834,
+            "MAPE_pct": 211.0,
+            "R2": 0.5573,
+            "train_n": 18935,
+            "test_n": 4807
+          },
+          "RandomForest": {
+            "MAE": 13.698,
+            "RMSE": 19.46,
+            "MAPE_pct": 217.91,
+            "R2": 0.5274,
+            "train_n": 18935,
+            "test_n": 4807
+          }
+        },
+        "Dark_best": "XGBoost",
+        "Dark": {
+          "Ridge": {
+            "MAE": 13.839,
+            "RMSE": 17.554,
+            "MAPE_pct": 49.49,
+            "R2": 0.1826,
+            "train_n": 4608,
+            "test_n": 1154
+          },
+          "XGBoost": {
+            "MAE": 9.651,
+            "RMSE": 13.694,
+            "MAPE_pct": 32.28,
+            "R2": 0.5025,
+            "train_n": 4608,
+            "test_n": 1154
+          },
+          "LightGBM": {
+            "MAE": 9.91,
+            "RMSE": 13.862,
+            "MAPE_pct": 33.84,
+            "R2": 0.4903,
+            "train_n": 4608,
+            "test_n": 1154
+          },
+          "RandomForest": {
+            "MAE": 10.46,
+            "RMSE": 14.594,
+            "MAPE_pct": 37.03,
+            "R2": 0.435,
+            "train_n": 4608,
+            "test_n": 1154
+          }
+        }
+      },
+      "Alkali_g_per_kg": {
+        "Light_best": "XGBoost",
+        "Light": {
+          "Ridge": {
+            "MAE": 36.879,
+            "RMSE": 46.781,
+            "MAPE_pct": 44.04,
+            "R2": 0.2942,
+            "train_n": 32179,
+            "test_n": 8107
+          },
+          "XGBoost": {
+            "MAE": 29.595,
+            "RMSE": 39.712,
+            "MAPE_pct": 34.65,
+            "R2": 0.4914,
+            "train_n": 32179,
+            "test_n": 8107
+          },
+          "LightGBM": {
+            "MAE": 29.655,
+            "RMSE": 39.65,
+            "MAPE_pct": 34.73,
+            "R2": 0.493,
+            "train_n": 32179,
+            "test_n": 8107
+          },
+          "RandomForest": {
+            "MAE": 29.903,
+            "RMSE": 40.171,
+            "MAPE_pct": 34.87,
+            "R2": 0.4796,
+            "train_n": 32179,
+            "test_n": 8107
+          }
+        },
+        "Dark_best": "XGBoost",
+        "Dark": {
+          "Ridge": {
+            "MAE": 37.055,
+            "RMSE": 48.357,
+            "MAPE_pct": 42.05,
+            "R2": 0.2097,
+            "train_n": 4642,
+            "test_n": 1159
+          },
+          "XGBoost": {
+            "MAE": 25.668,
+            "RMSE": 37.406,
+            "MAPE_pct": 27.52,
+            "R2": 0.5271,
+            "train_n": 4642,
+            "test_n": 1159
+          },
+          "LightGBM": {
+            "MAE": 26.579,
+            "RMSE": 38.109,
+            "MAPE_pct": 28.52,
+            "R2": 0.5092,
+            "train_n": 4642,
+            "test_n": 1159
+          },
+          "RandomForest": {
+            "MAE": 27.966,
+            "RMSE": 39.468,
+            "MAPE_pct": 31.77,
+            "R2": 0.4735,
+            "train_n": 4642,
+            "test_n": 1159
+          }
+        },
+        "White_best": "XGBoost",
+        "White": {
+          "Ridge": {
+            "MAE": 7.544,
+            "RMSE": 11.875,
+            "MAPE_pct": 47.12,
+            "R2": 0.3512,
+            "train_n": 7634,
+            "test_n": 1899
+          },
+          "XGBoost": {
+            "MAE": 5.615,
+            "RMSE": 9.465,
+            "MAPE_pct": 32.74,
+            "R2": 0.5878,
+            "train_n": 7634,
+            "test_n": 1899
+          },
+          "LightGBM": {
+            "MAE": 5.846,
+            "RMSE": 9.777,
+            "MAPE_pct": 33.52,
+            "R2": 0.5602,
+            "train_n": 7634,
+            "test_n": 1899
+          },
+          "RandomForest": {
+            "MAE": 6.094,
+            "RMSE": 10.614,
+            "MAPE_pct": 34.83,
+            "R2": 0.4816,
+            "train_n": 7634,
+            "test_n": 1899
+          }
+        }
+      }
+    }
+  },
+  "runtime_sec": 273.8,
+  "scientific_rationale": {
+    "Salt": "ANOVA F=40,841 on shade. Pooled model violates homoscedasticity. White batches use 0 salt, Dark uses 400+ g/kg.",
+    "Dye": "Zero-inflation: White/Bleach batches have 0 dye. MAPE â†’ infinity. Train only on colored batches.",
+    "Alkali": "ANOVA F=32,869 on shade. Alkali dosing protocol differs by shade (bleach = NaOH only; reactive = Na2CO3 + NaOH)."
+  }
+}

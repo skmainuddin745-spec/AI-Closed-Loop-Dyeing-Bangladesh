@@ -1,0 +1,583 @@
+﻿[
+  {
+    "scenario": 1,
+    "name": "Unit_A Â· S/J Â· Medium Â· Light/Medium Â· 350 kg Â· Jun",
+    "input": {
+      "unit": "Unit_A",
+      "fabric": "Single Jersey",
+      "gsm": "Medium (150-249)",
+      "shade": "Light/Medium Colored",
+      "fabric_kg": 350,
+      "lr": 7.0,
+      "month": 6,
+      "year": 2026,
+      "recipe_lines": 15,
+      "is_2part": 0,
+      "is_nextbatch": 0,
+      "is_finished": 1,
+      "dye_estimate": 15.0,
+      "color_depth_bin": "Medium"
+    },
+    "predictions": {
+      "Salt_g_per_kg": {
+        "value_per_kg": 168.3,
+        "total": 58.9,
+        "unit": "g/kg",
+        "p10": 96.4,
+        "p50": 156.7,
+        "p90": 288.12,
+        "vs_avg_pct": -23.1,
+        "confidence": "MEDIUM",
+        "mape": 22.9,
+        "color_depth_bin": "Medium"
+      },
+      "Dye_g_per_kg": {
+        "value_per_kg": 5.6,
+        "total": 2.0,
+        "unit": "g/kg",
+        "p10": 7.33,
+        "p50": 7.78,
+        "p90": 10.67,
+        "vs_avg_pct": -74.6,
+        "confidence": "LOW",
+        "mape": 51.0,
+        "color_depth_bin": "Medium"
+      },
+      "Alkali_g_per_kg": {
+        "value_per_kg": 61.1,
+        "total": 21.4,
+        "unit": "g/kg",
+        "p10": 59.03,
+        "p50": 96.74,
+        "p90": 125.88,
+        "vs_avg_pct": -36.4,
+        "confidence": "HIGH",
+        "mape": 15.8,
+        "color_depth_bin": "Medium"
+      },
+      "Chem_g_per_kg": {
+        "value_per_kg": 344.94,
+        "total": 120.7,
+        "unit": "g/kg",
+        "p10": 202.63,
+        "p50": 295.27,
+        "p90": 464.96,
+        "vs_avg_pct": -16.7,
+        "confidence": "HIGH",
+        "mape": 15.3,
+        "color_depth_bin": "Medium"
+      },
+      "Water_Intensity_L_per_kg": {
+        "value_per_kg": 7.01,
+        "total": 2452.0,
+        "unit": "L/kg",
+        "p10": 6.93,
+        "p50": 7.0,
+        "p90": 7.0,
+        "vs_avg_pct": 1.5,
+        "confidence": "HIGH",
+        "mape": 1.8,
+        "color_depth_bin": "Medium"
+      }
+    },
+    "color_depth_bin": "Medium"
+  },
+  {
+    "scenario": 2,
+    "name": "Unit_A Â· Fleece Â· Heavy Â· Dark Â· 500 kg Â· Jan",
+    "input": {
+      "unit": "Unit_A",
+      "fabric": "Fleece/Heavy",
+      "gsm": "Heavy (250+)",
+      "shade": "Dark/Extra Dark",
+      "fabric_kg": 500,
+      "lr": 8.0,
+      "month": 1,
+      "year": 2026,
+      "recipe_lines": 22,
+      "is_2part": 0,
+      "is_nextbatch": 0,
+      "is_finished": 1,
+      "dye_estimate": 40.0,
+      "color_depth_bin": "Dark"
+    },
+    "predictions": {
+      "Salt_g_per_kg": {
+        "value_per_kg": 229.88,
+        "total": 114.9,
+        "unit": "g/kg",
+        "p10": 85.34,
+        "p50": 409.27,
+        "p90": 644.77,
+        "vs_avg_pct": -45.5,
+        "confidence": "HIGH",
+        "mape": 19.2,
+        "color_depth_bin": "Dark"
+      },
+      "Dye_g_per_kg": {
+        "value_per_kg": 31.03,
+        "total": 15.5,
+        "unit": "g/kg",
+        "p10": 15.84,
+        "p50": 30.05,
+        "p90": 68.32,
+        "vs_avg_pct": -32.5,
+        "confidence": "LOW",
+        "mape": 47.9,
+        "color_depth_bin": "Dark"
+      },
+      "Alkali_g_per_kg": {
+        "value_per_kg": 133.34,
+        "total": 66.7,
+        "unit": "g/kg",
+        "p10": 74.11,
+        "p50": 137.34,
+        "p90": 198.32,
+        "vs_avg_pct": 10.2,
+        "confidence": "MEDIUM",
+        "mape": 33.6,
+        "color_depth_bin": "Dark"
+      },
+      "Chem_g_per_kg": {
+        "value_per_kg": 638.85,
+        "total": 319.4,
+        "unit": "g/kg",
+        "p10": 380.67,
+        "p50": 722.81,
+        "p90": 998.43,
+        "vs_avg_pct": -7.0,
+        "confidence": "HIGH",
+        "mape": 15.3,
+        "color_depth_bin": "Dark"
+      },
+      "Water_Intensity_L_per_kg": {
+        "value_per_kg": 8.01,
+        "total": 4007.0,
+        "unit": "L/kg",
+        "p10": 7.16,
+        "p50": 7.93,
+        "p90": 8.17,
+        "vs_avg_pct": 16.1,
+        "confidence": "HIGH",
+        "mape": 1.8,
+        "color_depth_bin": "Dark"
+      }
+    },
+    "color_depth_bin": "Dark"
+  },
+  {
+    "scenario": 3,
+    "name": "Unit_A Â· Rib Â· Medium Â· White/Bleach Â· 200 kg Â· Mar",
+    "input": {
+      "unit": "Unit_A",
+      "fabric": "Rib Fabric",
+      "gsm": "Medium (150-249)",
+      "shade": "White/Bleach",
+      "fabric_kg": 200,
+      "lr": 7.0,
+      "month": 3,
+      "year": 2026,
+      "recipe_lines": 8,
+      "is_2part": 0,
+      "is_nextbatch": 0,
+      "is_finished": 1,
+      "dye_estimate": 0.0,
+      "color_depth_bin": "White"
+    },
+    "predictions": {
+      "Salt_g_per_kg": {
+        "value_per_kg": 0.0,
+        "total": 0.0,
+        "unit": "g/kg",
+        "p10": 0.0,
+        "p50": 0.0,
+        "p90": 0.18,
+        "vs_avg_pct": -100.0,
+        "confidence": "LOW",
+        "mape": 80.9,
+        "color_depth_bin": "White"
+      },
+      "Dye_g_per_kg": {
+        "value_per_kg": 0.0,
+        "total": 0.0,
+        "unit": "g/kg",
+        "p10": 0.0,
+        "p50": 0.0,
+        "p90": 0.0,
+        "vs_avg_pct": -100.0,
+        "confidence": "HIGH",
+        "mape": 0.0,
+        "color_depth_bin": "White"
+      },
+      "Alkali_g_per_kg": {
+        "value_per_kg": 6.32,
+        "total": 1.3,
+        "unit": "g/kg",
+        "p10": 0.37,
+        "p50": 9.08,
+        "p90": 25.51,
+        "vs_avg_pct": -69.9,
+        "confidence": "LOW",
+        "mape": 245.6,
+        "color_depth_bin": "White"
+      },
+      "Chem_g_per_kg": {
+        "value_per_kg": 50.03,
+        "total": 10.0,
+        "unit": "g/kg",
+        "p10": 46.07,
+        "p50": 61.37,
+        "p90": 101.3,
+        "vs_avg_pct": -55.3,
+        "confidence": "HIGH",
+        "mape": 15.3,
+        "color_depth_bin": "White"
+      },
+      "Water_Intensity_L_per_kg": {
+        "value_per_kg": 7.11,
+        "total": 1422.7,
+        "unit": "L/kg",
+        "p10": 6.98,
+        "p50": 7.0,
+        "p90": 7.0,
+        "vs_avg_pct": 3.1,
+        "confidence": "HIGH",
+        "mape": 1.8,
+        "color_depth_bin": "White"
+      }
+    },
+    "color_depth_bin": "White"
+  },
+  {
+    "scenario": 4,
+    "name": "Unit_D Â· Lycra S/J Â· Light Â· Light/Medium Â· 150 kg Â· Aug",
+    "input": {
+      "unit": "Unit_D",
+      "fabric": "Lycra S/J",
+      "gsm": "Light (<150)",
+      "shade": "Light/Medium Colored",
+      "fabric_kg": 150,
+      "lr": 7.0,
+      "month": 8,
+      "year": 2026,
+      "recipe_lines": 18,
+      "is_2part": 0,
+      "is_nextbatch": 0,
+      "is_finished": 1,
+      "dye_estimate": 30.0,
+      "color_depth_bin": "Vivid"
+    },
+    "predictions": {
+      "Salt_g_per_kg": {
+        "value_per_kg": 605.02,
+        "total": 90.8,
+        "unit": "g/kg",
+        "p10": 310.87,
+        "p50": 525.94,
+        "p90": 632.72,
+        "vs_avg_pct": 185.4,
+        "confidence": "HIGH",
+        "mape": 12.7,
+        "color_depth_bin": "Vivid"
+      },
+      "Dye_g_per_kg": {
+        "value_per_kg": 82.56,
+        "total": 12.4,
+        "unit": "g/kg",
+        "p10": 29.58,
+        "p50": 56.31,
+        "p90": 79.87,
+        "vs_avg_pct": 489.7,
+        "confidence": "MEDIUM",
+        "mape": 24.8,
+        "color_depth_bin": "Vivid"
+      },
+      "Alkali_g_per_kg": {
+        "value_per_kg": 57.13,
+        "total": 8.6,
+        "unit": "g/kg",
+        "p10": 111.6,
+        "p50": 105.24,
+        "p90": 182.44,
+        "vs_avg_pct": -37.2,
+        "confidence": "MEDIUM",
+        "mape": 27.4,
+        "color_depth_bin": "Vivid"
+      },
+      "Chem_g_per_kg": {
+        "value_per_kg": 746.71,
+        "total": 112.0,
+        "unit": "g/kg",
+        "p10": 574.33,
+        "p50": 764.91,
+        "p90": 930.11,
+        "vs_avg_pct": 82.6,
+        "confidence": "HIGH",
+        "mape": 16.9,
+        "color_depth_bin": "Vivid"
+      },
+      "Water_Intensity_L_per_kg": {
+        "value_per_kg": 7.09,
+        "total": 1064.2,
+        "unit": "L/kg",
+        "p10": 6.97,
+        "p50": 7.0,
+        "p90": 7.11,
+        "vs_avg_pct": -7.9,
+        "confidence": "HIGH",
+        "mape": 2.5,
+        "color_depth_bin": "Vivid"
+      }
+    },
+    "color_depth_bin": "Vivid"
+  },
+  {
+    "scenario": 5,
+    "name": "Unit_D Â· Composite Â· Heavy Â· Dark Â· 800 kg Â· Dec Â· 2-Part",
+    "input": {
+      "unit": "Unit_D",
+      "fabric": "Composite",
+      "gsm": "Heavy (250+)",
+      "shade": "Dark/Extra Dark",
+      "fabric_kg": 800,
+      "lr": 8.0,
+      "month": 12,
+      "year": 2026,
+      "recipe_lines": 28,
+      "is_2part": 1,
+      "is_nextbatch": 0,
+      "is_finished": 1,
+      "dye_estimate": 38.0,
+      "color_depth_bin": "Dark"
+    },
+    "predictions": {
+      "Salt_g_per_kg": {
+        "value_per_kg": 332.84,
+        "total": 266.3,
+        "unit": "g/kg",
+        "p10": 411.49,
+        "p50": 454.25,
+        "p90": 548.18,
+        "vs_avg_pct": -25.0,
+        "confidence": "HIGH",
+        "mape": 17.4,
+        "color_depth_bin": "Dark"
+      },
+      "Dye_g_per_kg": {
+        "value_per_kg": 39.23,
+        "total": 31.4,
+        "unit": "g/kg",
+        "p10": 20.84,
+        "p50": 36.82,
+        "p90": 54.52,
+        "vs_avg_pct": 3.2,
+        "confidence": "MEDIUM",
+        "mape": 32.2,
+        "color_depth_bin": "Dark"
+      },
+      "Alkali_g_per_kg": {
+        "value_per_kg": 102.82,
+        "total": 82.3,
+        "unit": "g/kg",
+        "p10": 62.6,
+        "p50": 60.9,
+        "p90": 156.0,
+        "vs_avg_pct": -24.4,
+        "confidence": "MEDIUM",
+        "mape": 25.5,
+        "color_depth_bin": "Dark"
+      },
+      "Chem_g_per_kg": {
+        "value_per_kg": 593.66,
+        "total": 474.9,
+        "unit": "g/kg",
+        "p10": 561.99,
+        "p50": 730.2,
+        "p90": 828.56,
+        "vs_avg_pct": -16.2,
+        "confidence": "HIGH",
+        "mape": 16.9,
+        "color_depth_bin": "Dark"
+      },
+      "Water_Intensity_L_per_kg": {
+        "value_per_kg": 8.04,
+        "total": 6433.3,
+        "unit": "L/kg",
+        "p10": 7.11,
+        "p50": 7.97,
+        "p90": 8.02,
+        "vs_avg_pct": 13.3,
+        "confidence": "HIGH",
+        "mape": 2.5,
+        "color_depth_bin": "Dark"
+      }
+    },
+    "color_depth_bin": "Dark"
+  },
+  {
+    "scenario": 6,
+    "name": "Unit_A Â· Pale Tint Â· Light (<150) Â· Light/Medium Â· 250 kg Â· Apr",
+    "input": {
+      "unit": "Unit_A",
+      "fabric": "Single Jersey",
+      "gsm": "Light (<150)",
+      "shade": "Light/Medium Colored",
+      "fabric_kg": 250,
+      "lr": 6.0,
+      "month": 4,
+      "year": 2026,
+      "recipe_lines": 8,
+      "is_2part": 0,
+      "is_nextbatch": 1,
+      "is_finished": 1,
+      "dye_estimate": 0.5,
+      "color_depth_bin": "Light"
+    },
+    "predictions": {
+      "Salt_g_per_kg": {
+        "value_per_kg": 6.22,
+        "total": 1.6,
+        "unit": "g/kg",
+        "p10": 0.0,
+        "p50": 44.96,
+        "p90": 17.79,
+        "vs_avg_pct": -97.2,
+        "confidence": "MEDIUM",
+        "mape": 37.2,
+        "color_depth_bin": "Light"
+      },
+      "Dye_g_per_kg": {
+        "value_per_kg": 1.9,
+        "total": 0.5,
+        "unit": "g/kg",
+        "p10": 1.1,
+        "p50": 1.36,
+        "p90": 1.56,
+        "vs_avg_pct": -91.4,
+        "confidence": "HIGH",
+        "mape": 16.9,
+        "color_depth_bin": "Light"
+      },
+      "Alkali_g_per_kg": {
+        "value_per_kg": 10.42,
+        "total": 2.6,
+        "unit": "g/kg",
+        "p10": 0.0,
+        "p50": 8.16,
+        "p90": 21.38,
+        "vs_avg_pct": -89.1,
+        "confidence": "MEDIUM",
+        "mape": 23.1,
+        "color_depth_bin": "Light"
+      },
+      "Chem_g_per_kg": {
+        "value_per_kg": 53.54,
+        "total": 13.4,
+        "unit": "g/kg",
+        "p10": 48.94,
+        "p50": 67.09,
+        "p90": 102.79,
+        "vs_avg_pct": -87.1,
+        "confidence": "HIGH",
+        "mape": 15.3,
+        "color_depth_bin": "Light"
+      },
+      "Water_Intensity_L_per_kg": {
+        "value_per_kg": 5.92,
+        "total": 1479.5,
+        "unit": "L/kg",
+        "p10": 5.97,
+        "p50": 6.15,
+        "p90": 6.13,
+        "vs_avg_pct": -14.2,
+        "confidence": "HIGH",
+        "mape": 1.8,
+        "color_depth_bin": "Light"
+      }
+    },
+    "color_depth_bin": "Light"
+  },
+  {
+    "scenario": 7,
+    "name": "Unit_D Â· White/Bleach Â· Next Batch (No Salt) Â· 300 kg Â· Sep",
+    "input": {
+      "unit": "Unit_D",
+      "fabric": "Single Jersey",
+      "gsm": "Medium (150-249)",
+      "shade": "White/Bleach",
+      "fabric_kg": 300,
+      "lr": 7.0,
+      "month": 9,
+      "year": 2026,
+      "recipe_lines": 6,
+      "is_2part": 0,
+      "is_nextbatch": 1,
+      "is_finished": 1,
+      "dye_estimate": 0.0,
+      "color_depth_bin": "White"
+    },
+    "predictions": {
+      "Salt_g_per_kg": {
+        "value_per_kg": 0.0,
+        "total": 0.0,
+        "unit": "g/kg",
+        "p10": 0.0,
+        "p50": 0.0,
+        "p90": 0.0,
+        "vs_avg_pct": -100.0,
+        "confidence": "HIGH",
+        "mape": 0.0,
+        "color_depth_bin": "White"
+      },
+      "Dye_g_per_kg": {
+        "value_per_kg": 0.0,
+        "total": 0.0,
+        "unit": "g/kg",
+        "p10": 0.0,
+        "p50": 0.0,
+        "p90": 0.0,
+        "vs_avg_pct": -100.0,
+        "confidence": "HIGH",
+        "mape": 0.0,
+        "color_depth_bin": "White"
+      },
+      "Alkali_g_per_kg": {
+        "value_per_kg": 9.88,
+        "total": 3.0,
+        "unit": "g/kg",
+        "p10": 1.33,
+        "p50": 5.69,
+        "p90": 13.4,
+        "vs_avg_pct": -55.1,
+        "confidence": "MEDIUM",
+        "mape": 28.5,
+        "color_depth_bin": "White"
+      },
+      "Chem_g_per_kg": {
+        "value_per_kg": 74.97,
+        "total": 22.5,
+        "unit": "g/kg",
+        "p10": 30.31,
+        "p50": 36.01,
+        "p90": 55.14,
+        "vs_avg_pct": -28.6,
+        "confidence": "HIGH",
+        "mape": 16.9,
+        "color_depth_bin": "White"
+      },
+      "Water_Intensity_L_per_kg": {
+        "value_per_kg": 7.77,
+        "total": 2329.6,
+        "unit": "L/kg",
+        "p10": 6.98,
+        "p50": 7.56,
+        "p90": 8.53,
+        "vs_avg_pct": 12.5,
+        "confidence": "HIGH",
+        "mape": 2.5,
+        "color_depth_bin": "White"
+      }
+    },
+    "color_depth_bin": "White"
+  }
+]

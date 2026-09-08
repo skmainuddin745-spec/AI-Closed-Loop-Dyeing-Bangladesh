@@ -1,0 +1,346 @@
+﻿[
+  {
+    "scenario": 1,
+    "name": "Unit_A Â· Single Jersey Â· Medium Â· Light/Medium Â· 350 kg Â· Jun",
+    "input": {
+      "unit": "Unit_A",
+      "fabric_type": "Single Jersey",
+      "gsm_cat": "Medium (150-249)",
+      "shade": "Light/Medium Colored",
+      "fabric_kg": 350.0,
+      "liquor_ratio": 7.0,
+      "month": 6,
+      "year": 2025
+    },
+    "predictions": {
+      "Salt_g_per_kg": {
+        "value_per_kg": 219.61,
+        "total_val": 76.86,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "RandomForest",
+        "model_source": "Stratified/Light",
+        "mape": 64.7,
+        "confidence": "LOW",
+        "clamped": false
+      },
+      "Dye_g_per_kg": {
+        "value_per_kg": 26.88,
+        "total_val": 9.41,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "XGBoost",
+        "model_source": "Stratified/Light",
+        "mape": 251.4,
+        "confidence": "LOW",
+        "clamped": false
+      },
+      "Alkali_g_per_kg": {
+        "value_per_kg": 89.63,
+        "total_val": 31.37,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "XGBoost",
+        "model_source": "Stratified/Light",
+        "mape": 40.9,
+        "confidence": "LOW",
+        "clamped": false
+      },
+      "Chem_g_per_kg": {
+        "value_per_kg": 414.69,
+        "total_val": 145.14,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "RandomForest",
+        "model_source": "Pooled",
+        "mape": 31.8,
+        "confidence": "MEDIUM",
+        "clamped": false
+      },
+      "Water_Intensity_L_per_kg": {
+        "value_per_kg": 7.01,
+        "total_val": 2452.8,
+        "unit_str": "L/kg",
+        "total_unit": "L",
+        "model_type": "RandomForest",
+        "model_source": "Pooled",
+        "mape": 1.7,
+        "confidence": "HIGH",
+        "clamped": false
+      }
+    }
+  },
+  {
+    "scenario": 2,
+    "name": "Unit_A Â· Fleece/Heavy Â· Heavy Â· Dark Â· 500 kg Â· Jan",
+    "input": {
+      "unit": "Unit_A",
+      "fabric_type": "Fleece/Heavy",
+      "gsm_cat": "Heavy (250+)",
+      "shade": "Dark/Extra Dark",
+      "fabric_kg": 500.0,
+      "liquor_ratio": 8.0,
+      "month": 1,
+      "year": 2025
+    },
+    "predictions": {
+      "Salt_g_per_kg": {
+        "value_per_kg": 407.77,
+        "total_val": 203.89,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "XGBoost",
+        "model_source": "Stratified/Dark",
+        "mape": 19.3,
+        "confidence": "HIGH",
+        "clamped": false
+      },
+      "Dye_g_per_kg": {
+        "value_per_kg": 35.48,
+        "total_val": 17.74,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "XGBoost",
+        "model_source": "Stratified/Dark",
+        "mape": 61.7,
+        "confidence": "LOW",
+        "clamped": false
+      },
+      "Alkali_g_per_kg": {
+        "value_per_kg": 163.21,
+        "total_val": 81.6,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "XGBoost",
+        "model_source": "Stratified/Dark",
+        "mape": 36.6,
+        "confidence": "MEDIUM",
+        "clamped": false
+      },
+      "Chem_g_per_kg": {
+        "value_per_kg": 604.29,
+        "total_val": 302.14,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "RandomForest",
+        "model_source": "Pooled",
+        "mape": 31.8,
+        "confidence": "MEDIUM",
+        "clamped": false
+      },
+      "Water_Intensity_L_per_kg": {
+        "value_per_kg": 7.98,
+        "total_val": 3990.5,
+        "unit_str": "L/kg",
+        "total_unit": "L",
+        "model_type": "RandomForest",
+        "model_source": "Pooled",
+        "mape": 1.7,
+        "confidence": "HIGH",
+        "clamped": false
+      }
+    }
+  },
+  {
+    "scenario": 3,
+    "name": "Unit_A Â· Rib Fabric Â· Medium Â· White/Bleach Â· 200 kg Â· Mar",
+    "input": {
+      "unit": "Unit_A",
+      "fabric_type": "Rib Fabric",
+      "gsm_cat": "Medium (150-249)",
+      "shade": "White/Bleach",
+      "fabric_kg": 200.0,
+      "liquor_ratio": 7.0,
+      "month": 3,
+      "year": 2025
+    },
+    "predictions": {
+      "Salt_g_per_kg": {
+        "value_per_kg": 62.16,
+        "total_val": 12.43,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "XGBoost",
+        "model_source": "Stratified/White",
+        "mape": 37.1,
+        "confidence": "MEDIUM",
+        "clamped": false
+      },
+      "Alkali_g_per_kg": {
+        "value_per_kg": 52.68,
+        "total_val": 10.54,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "XGBoost",
+        "model_source": "Stratified/White",
+        "mape": 37.3,
+        "confidence": "MEDIUM",
+        "clamped": false
+      },
+      "Chem_g_per_kg": {
+        "value_per_kg": 451.82,
+        "total_val": 90.36,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "RandomForest",
+        "model_source": "Pooled",
+        "mape": 31.8,
+        "confidence": "MEDIUM",
+        "clamped": false
+      },
+      "Water_Intensity_L_per_kg": {
+        "value_per_kg": 6.99,
+        "total_val": 1397.7,
+        "unit_str": "L/kg",
+        "total_unit": "L",
+        "model_type": "RandomForest",
+        "model_source": "Pooled",
+        "mape": 1.7,
+        "confidence": "HIGH",
+        "clamped": false
+      }
+    }
+  },
+  {
+    "scenario": 4,
+    "name": "Unit_D Â· Lycra S/J Â· Light Â· Light/Medium Â· 150 kg Â· Aug",
+    "input": {
+      "unit": "Unit_D",
+      "fabric_type": "Lycra S/J",
+      "gsm_cat": "Light (<150)",
+      "shade": "Light/Medium Colored",
+      "fabric_kg": 150.0,
+      "liquor_ratio": 7.0,
+      "month": 8,
+      "year": 2025
+    },
+    "predictions": {
+      "Salt_g_per_kg": {
+        "value_per_kg": 237.06,
+        "total_val": 35.56,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "XGBoost",
+        "model_source": "Stratified/Light",
+        "mape": 56.5,
+        "confidence": "LOW",
+        "clamped": false
+      },
+      "Dye_g_per_kg": {
+        "value_per_kg": 30.18,
+        "total_val": 4.53,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "XGBoost",
+        "model_source": "Stratified/Light",
+        "mape": 207.8,
+        "confidence": "LOW",
+        "clamped": false
+      },
+      "Alkali_g_per_kg": {
+        "value_per_kg": 84.5,
+        "total_val": 12.68,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "XGBoost",
+        "model_source": "Stratified/Light",
+        "mape": 34.6,
+        "confidence": "MEDIUM",
+        "clamped": false
+      },
+      "Chem_g_per_kg": {
+        "value_per_kg": 425.78,
+        "total_val": 63.87,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "RandomForest",
+        "model_source": "Pooled",
+        "mape": 26.8,
+        "confidence": "MEDIUM",
+        "clamped": false
+      },
+      "Water_Intensity_L_per_kg": {
+        "value_per_kg": 7.07,
+        "total_val": 1060.8,
+        "unit_str": "L/kg",
+        "total_unit": "L",
+        "model_type": "RandomForest",
+        "model_source": "Pooled",
+        "mape": 2.5,
+        "confidence": "HIGH",
+        "clamped": false
+      }
+    }
+  },
+  {
+    "scenario": 5,
+    "name": "Unit_D Â· Composite Â· Heavy Â· Dark Â· 800 kg Â· Dec",
+    "input": {
+      "unit": "Unit_D",
+      "fabric_type": "Composite",
+      "gsm_cat": "Heavy (250+)",
+      "shade": "Dark/Extra Dark",
+      "fabric_kg": 800.0,
+      "liquor_ratio": 8.0,
+      "month": 12,
+      "year": 2025
+    },
+    "predictions": {
+      "Salt_g_per_kg": {
+        "value_per_kg": 512.62,
+        "total_val": 410.09,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "LightGBM",
+        "model_source": "Stratified/Dark",
+        "mape": 24.4,
+        "confidence": "MEDIUM",
+        "clamped": false
+      },
+      "Dye_g_per_kg": {
+        "value_per_kg": 33.95,
+        "total_val": 27.16,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "XGBoost",
+        "model_source": "Stratified/Dark",
+        "mape": 32.3,
+        "confidence": "MEDIUM",
+        "clamped": false
+      },
+      "Alkali_g_per_kg": {
+        "value_per_kg": 98.73,
+        "total_val": 78.99,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "XGBoost",
+        "model_source": "Stratified/Dark",
+        "mape": 27.5,
+        "confidence": "MEDIUM",
+        "clamped": false
+      },
+      "Chem_g_per_kg": {
+        "value_per_kg": 690.43,
+        "total_val": 552.34,
+        "unit_str": "g/kg",
+        "total_unit": "kg",
+        "model_type": "RandomForest",
+        "model_source": "Pooled",
+        "mape": 26.8,
+        "confidence": "MEDIUM",
+        "clamped": false
+      },
+      "Water_Intensity_L_per_kg": {
+        "value_per_kg": 8.02,
+        "total_val": 6415.1,
+        "unit_str": "L/kg",
+        "total_unit": "L",
+        "model_type": "RandomForest",
+        "model_source": "Pooled",
+        "mape": 2.5,
+        "confidence": "HIGH",
+        "clamped": false
+      }
+    }
+  }
+]

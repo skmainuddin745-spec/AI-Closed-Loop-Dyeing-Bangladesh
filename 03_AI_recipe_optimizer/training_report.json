@@ -1,0 +1,728 @@
+﻿{
+  "generated": "2026-09-04T20:00:12",
+  "qc_usable_total": 214327,
+  "units_trained": [
+    "Unit_A",
+    "Unit_D"
+  ],
+  "targets": [
+    "Salt_g_per_kg",
+    "Dye_g_per_kg",
+    "Alkali_g_per_kg",
+    "Chem_g_per_kg",
+    "Water_Intensity_L_per_kg"
+  ],
+  "features_n": 23,
+  "features": [
+    "Log_Fabric_Kg",
+    "GSM_Ord",
+    "LR",
+    "Month_sin",
+    "Year",
+    "Recipe_Lines",
+    "GSM_x_LogFab",
+    "Shade_Dark/Extra Dark",
+    "Shade_Light/Medium Colored",
+    "Shade_White/Bleach",
+    "Fab_Composite",
+    "Fab_Fleece/Heavy",
+    "Fab_Interlock",
+    "Fab_Lycra S/J",
+    "Fab_Other",
+    "Fab_Rib Fabric",
+    "Fab_Single Jersey",
+    "DType_2Part || F",
+    "DType_2Part || H",
+    "DType_2Part || N",
+    "DType_2Part || R",
+    "DType_2Part || U",
+    "DType_Normal || "
+  ],
+  "metrics": {
+    "Unit_A": {
+      "Salt_g_per_kg": {
+        "Ridge": {
+          "MAE": 130.783,
+          "RMSE": 165.768,
+          "MAPE_pct": 94.47,
+          "R2": 0.4111,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "RandomForest": {
+          "MAE": 82.804,
+          "RMSE": 123.367,
+          "MAPE_pct": 63.04,
+          "R2": 0.6738,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "XGBoost": {
+          "MAE": 81.603,
+          "RMSE": 120.144,
+          "MAPE_pct": 61.45,
+          "R2": 0.6907,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "LightGBM": {
+          "MAE": 82.307,
+          "RMSE": 120.737,
+          "MAPE_pct": 61.93,
+          "R2": 0.6876,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "_best": "XGBoost"
+      },
+      "Dye_g_per_kg": {
+        "Ridge": {
+          "MAE": 21.458,
+          "RMSE": 29.083,
+          "MAPE_pct": 7713.15,
+          "R2": 0.2148,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "RandomForest": {
+          "MAE": 13.225,
+          "RMSE": 21.463,
+          "MAPE_pct": 2887.24,
+          "R2": 0.5723,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "XGBoost": {
+          "MAE": 13.192,
+          "RMSE": 21.083,
+          "MAPE_pct": 2917.27,
+          "R2": 0.5873,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "LightGBM": {
+          "MAE": 13.348,
+          "RMSE": 21.264,
+          "MAPE_pct": 2992.23,
+          "R2": 0.5802,
+          "train_n": 122836,
+          "test_n": 30710
+        }
+      },
+      "Alkali_g_per_kg": {
+        "Ridge": {
+          "MAE": 37.485,
+          "RMSE": 47.107,
+          "MAPE_pct": 120.87,
+          "R2": 0.4953,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "RandomForest": {
+          "MAE": 30.6,
+          "RMSE": 40.794,
+          "MAPE_pct": 78.04,
+          "R2": 0.6215,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "XGBoost": {
+          "MAE": 29.269,
+          "RMSE": 39.367,
+          "MAPE_pct": 87.51,
+          "R2": 0.6475,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "LightGBM": {
+          "MAE": 29.512,
+          "RMSE": 39.463,
+          "MAPE_pct": 97.03,
+          "R2": 0.6458,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "_best": "RandomForest"
+      },
+      "Chem_g_per_kg": {
+        "Ridge": {
+          "MAE": 178.677,
+          "RMSE": 226.758,
+          "MAPE_pct": 75.23,
+          "R2": 0.5057,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "RandomForest": {
+          "MAE": 118.222,
+          "RMSE": 172.961,
+          "MAPE_pct": 31.76,
+          "R2": 0.7124,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "XGBoost": {
+          "MAE": 115.343,
+          "RMSE": 167.543,
+          "MAPE_pct": 33.73,
+          "R2": 0.7301,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "LightGBM": {
+          "MAE": 116.322,
+          "RMSE": 168.305,
+          "MAPE_pct": 34.04,
+          "R2": 0.7277,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "_best": "RandomForest"
+      },
+      "Water_Intensity_L_per_kg": {
+        "Ridge": {
+          "MAE": 0.592,
+          "RMSE": 1.056,
+          "MAPE_pct": 8.87,
+          "R2": 0.1154,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "RandomForest": {
+          "MAE": 0.138,
+          "RMSE": 0.744,
+          "MAPE_pct": 1.73,
+          "R2": 0.5607,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "XGBoost": {
+          "MAE": 0.147,
+          "RMSE": 0.75,
+          "MAPE_pct": 1.86,
+          "R2": 0.5534,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "LightGBM": {
+          "MAE": 0.147,
+          "RMSE": 0.744,
+          "MAPE_pct": 1.86,
+          "R2": 0.5611,
+          "train_n": 122836,
+          "test_n": 30710
+        },
+        "_best": "RandomForest"
+      }
+    },
+    "Unit_D": {
+      "Salt_g_per_kg": {
+        "Ridge": {
+          "MAE": 103.554,
+          "RMSE": 140.866,
+          "MAPE_pct": 89.24,
+          "R2": 0.5177,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "RandomForest": {
+          "MAE": 67.258,
+          "RMSE": 106.466,
+          "MAPE_pct": 54.04,
+          "R2": 0.7245,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "XGBoost": {
+          "MAE": 66.888,
+          "RMSE": 103.867,
+          "MAPE_pct": 53.29,
+          "R2": 0.7378,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "LightGBM": {
+          "MAE": 68.102,
+          "RMSE": 105.109,
+          "MAPE_pct": 54.55,
+          "R2": 0.7315,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "_best": "XGBoost"
+      },
+      "Dye_g_per_kg": {
+        "Ridge": {
+          "MAE": 13.634,
+          "RMSE": 20.133,
+          "MAPE_pct": 6515.34,
+          "R2": 0.2883,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "RandomForest": {
+          "MAE": 7.938,
+          "RMSE": 14.623,
+          "MAPE_pct": 2493.91,
+          "R2": 0.6246,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "XGBoost": {
+          "MAE": 7.907,
+          "RMSE": 14.239,
+          "MAPE_pct": 2312.22,
+          "R2": 0.644,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "LightGBM": {
+          "MAE": 8.038,
+          "RMSE": 14.444,
+          "MAPE_pct": 2391.61,
+          "R2": 0.6337,
+          "train_n": 48624,
+          "test_n": 12157
+        }
+      },
+      "Alkali_g_per_kg": {
+        "Ridge": {
+          "MAE": 31.209,
+          "RMSE": 42.517,
+          "MAPE_pct": 47.74,
+          "R2": 0.5554,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "RandomForest": {
+          "MAE": 24.106,
+          "RMSE": 35.592,
+          "MAPE_pct": 35.61,
+          "R2": 0.6884,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "XGBoost": {
+          "MAE": 23.759,
+          "RMSE": 34.971,
+          "MAPE_pct": 35.46,
+          "R2": 0.6992,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "LightGBM": {
+          "MAE": 24.048,
+          "RMSE": 35.039,
+          "MAPE_pct": 36.52,
+          "R2": 0.698,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "_best": "XGBoost"
+      },
+      "Chem_g_per_kg": {
+        "Ridge": {
+          "MAE": 142.174,
+          "RMSE": 189.684,
+          "MAPE_pct": 48.11,
+          "R2": 0.5816,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "RandomForest": {
+          "MAE": 92.86,
+          "RMSE": 143.443,
+          "MAPE_pct": 26.78,
+          "R2": 0.7607,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "XGBoost": {
+          "MAE": 91.931,
+          "RMSE": 139.521,
+          "MAPE_pct": 28.29,
+          "R2": 0.7736,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "LightGBM": {
+          "MAE": 93.314,
+          "RMSE": 140.997,
+          "MAPE_pct": 29.41,
+          "R2": 0.7688,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "_best": "RandomForest"
+      },
+      "Water_Intensity_L_per_kg": {
+        "Ridge": {
+          "MAE": 1.043,
+          "RMSE": 1.535,
+          "MAPE_pct": 13.21,
+          "R2": 0.5653,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "RandomForest": {
+          "MAE": 0.25,
+          "RMSE": 0.964,
+          "MAPE_pct": 2.51,
+          "R2": 0.8286,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "XGBoost": {
+          "MAE": 0.271,
+          "RMSE": 0.974,
+          "MAPE_pct": 2.75,
+          "R2": 0.825,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "LightGBM": {
+          "MAE": 0.27,
+          "RMSE": 0.964,
+          "MAPE_pct": 2.75,
+          "R2": 0.8284,
+          "train_n": 48624,
+          "test_n": 12157
+        },
+        "_best": "RandomForest"
+      }
+    }
+  },
+  "anova": {
+    "Salt_g_per_kg": {
+      "F": 40841.0,
+      "p": 0.0
+    },
+    "Dye_g_per_kg": {
+      "F": 16459.17,
+      "p": 0.0
+    },
+    "Alkali_g_per_kg": {
+      "F": 32869.11,
+      "p": 0.0
+    },
+    "Chem_g_per_kg": {
+      "F": 36873.09,
+      "p": 0.0
+    },
+    "Water_Intensity_L_per_kg": {
+      "F": 274.28,
+      "p": 1.0814034468105512e-119
+    }
+  },
+  "pearson": {
+    "Chem_g_per_kg â†” Cost_Tk_per_kg": {
+      "r": 0.8108,
+      "n": 214327
+    },
+    "Salt_g_per_kg â†” Dye_g_per_kg": {
+      "r": 0.8429,
+      "n": 214327
+    },
+    "Chem_g_per_kg â†” Salt_g_per_kg": {
+      "r": 0.9742,
+      "n": 214327
+    },
+    "Water_Intensity_L_per_kg â†” Fabric_Kg": {
+      "r": -0.2827,
+      "n": 214327
+    },
+    "Water_Intensity_L_per_kg â†” Cost_Tk_per_kg": {
+      "r": -0.017,
+      "n": 214327
+    },
+    "Log_Fabric_Kg â†” Water_Intensity_L_per_kg": {
+      "r": -0.5176,
+      "n": 214327
+    },
+    "GSM_Ord â†” Salt_g_per_kg": {
+      "r": 0.1205,
+      "n": 214327
+    }
+  },
+  "eda_stats": {
+    "Unit_A": {
+      "n": 153546,
+      "Salt_g_per_kg": {
+        "mean": 236.994,
+        "median": 140.0,
+        "std": 215.464,
+        "p10": 0.0,
+        "p25": 60.0,
+        "p75": 420.0,
+        "p90": 560.0,
+        "cv_pct": 90.9,
+        "n": 153546
+      },
+      "Dye_g_per_kg": {
+        "mean": 23.424,
+        "median": 3.42,
+        "std": 32.807,
+        "p10": 0.0,
+        "p25": 0.04,
+        "p75": 41.28,
+        "p90": 74.94,
+        "cv_pct": 140.1,
+        "n": 153546
+      },
+      "Alkali_g_per_kg": {
+        "mean": 93.502,
+        "median": 79.95,
+        "std": 65.996,
+        "p10": 12.0,
+        "p25": 45.0,
+        "p75": 146.0,
+        "p90": 182.0,
+        "cv_pct": 70.6,
+        "n": 153546
+      },
+      "Chem_g_per_kg": {
+        "mean": 457.49,
+        "median": 377.52,
+        "std": 321.054,
+        "p10": 78.325,
+        "p25": 194.24,
+        "p75": 737.297,
+        "p90": 900.965,
+        "cv_pct": 70.2,
+        "n": 153546
+      },
+      "Water_Intensity_L_per_kg": {
+        "mean": 6.902,
+        "median": 7.0,
+        "std": 1.104,
+        "p10": 6.0,
+        "p25": 6.774,
+        "p75": 7.0,
+        "p90": 7.5,
+        "cv_pct": 16.0,
+        "n": 153546
+      }
+    },
+    "Unit_D": {
+      "n": 60781,
+      "Salt_g_per_kg": {
+        "mean": 200.302,
+        "median": 130.0,
+        "std": 203.643,
+        "p10": 0.0,
+        "p25": 30.0,
+        "p75": 350.0,
+        "p90": 555.56,
+        "cv_pct": 101.7,
+        "n": 60781
+      },
+      "Dye_g_per_kg": {
+        "mean": 14.322,
+        "median": 0.88,
+        "std": 23.971,
+        "p10": 0.0,
+        "p25": 0.0,
+        "p75": 21.95,
+        "p90": 50.18,
+        "cv_pct": 167.4,
+        "n": 60781
+      },
+      "Alkali_g_per_kg": {
+        "mean": 83.642,
+        "median": 65.0,
+        "std": 63.79,
+        "p10": 7.2,
+        "p25": 39.0,
+        "p75": 127.8,
+        "p90": 176.8,
+        "cv_pct": 76.3,
+        "n": 60781
+      },
+      "Chem_g_per_kg": {
+        "mean": 387.307,
+        "median": 289.56,
+        "std": 294.728,
+        "p10": 61.82,
+        "p25": 162.36,
+        "p75": 623.6,
+        "p90": 851.31,
+        "cv_pct": 76.1,
+        "n": 60781
+      },
+      "Water_Intensity_L_per_kg": {
+        "mean": 7.555,
+        "median": 7.0,
+        "std": 2.328,
+        "p10": 6.0,
+        "p25": 6.5,
+        "p75": 7.439,
+        "p90": 10.794,
+        "cv_pct": 30.8,
+        "n": 60781
+      }
+    }
+  },
+  "cross_tab": {
+    "Salt_g_per_kg": {
+      "Light/Medium Colored": {
+        "Light (<150)": {
+          "n": 10485,
+          "mean": 165.88,
+          "p25": 60.0
+        },
+        "Medium (150-249)": {
+          "n": 82984,
+          "mean": 232.34,
+          "p25": 70.0
+        },
+        "Heavy (250+)": {
+          "n": 63443,
+          "mean": 280.65,
+          "p25": 75.0
+        }
+      },
+      "Dark/Extra Dark": {
+        "Light (<150)": {
+          "n": 1627,
+          "mean": 410.65,
+          "p25": 325.0
+        },
+        "Medium (150-249)": {
+          "n": 13086,
+          "mean": 427.5,
+          "p25": 350.0
+        },
+        "Heavy (250+)": {
+          "n": 7579,
+          "mean": 431.88,
+          "p25": 333.33
+        }
+      },
+      "White/Bleach": {
+        "Light (<150)": {
+          "n": 2664,
+          "mean": 7.65,
+          "p25": 0.0
+        },
+        "Medium (150-249)": {
+          "n": 20236,
+          "mean": 3.49,
+          "p25": 0.0
+        },
+        "Heavy (250+)": {
+          "n": 12063,
+          "mean": 8.48,
+          "p25": 0.0
+        }
+      }
+    },
+    "Dye_g_per_kg": {
+      "Light/Medium Colored": {
+        "Light (<150)": {
+          "n": 10485,
+          "mean": 11.76,
+          "p25": 0.03
+        },
+        "Medium (150-249)": {
+          "n": 82984,
+          "mean": 20.03,
+          "p25": 0.22
+        },
+        "Heavy (250+)": {
+          "n": 63443,
+          "mean": 26.88,
+          "p25": 0.51
+        }
+      },
+      "Dark/Extra Dark": {
+        "Light (<150)": {
+          "n": 1627,
+          "mean": 37.47,
+          "p25": 20.93
+        },
+        "Medium (150-249)": {
+          "n": 13086,
+          "mean": 43.93,
+          "p25": 23.27
+        },
+        "Heavy (250+)": {
+          "n": 7579,
+          "mean": 44.71,
+          "p25": 22.07
+        }
+      },
+      "White/Bleach": {
+        "Light (<150)": {
+          "n": 2664,
+          "mean": 0.05,
+          "p25": 0.0
+        },
+        "Medium (150-249)": {
+          "n": 20236,
+          "mean": 0.01,
+          "p25": 0.0
+        },
+        "Heavy (250+)": {
+          "n": 12063,
+          "mean": 0.03,
+          "p25": 0.0
+        }
+      }
+    },
+    "Water_Intensity_L_per_kg": {
+      "Light/Medium Colored": {
+        "Light (<150)": {
+          "n": 10485,
+          "mean": 7.35,
+          "p25": 6.32
+        },
+        "Medium (150-249)": {
+          "n": 82984,
+          "mean": 7.15,
+          "p25": 6.5
+        },
+        "Heavy (250+)": {
+          "n": 63443,
+          "mean": 7.06,
+          "p25": 7.0
+        }
+      },
+      "Dark/Extra Dark": {
+        "Light (<150)": {
+          "n": 1627,
+          "mean": 7.05,
+          "p25": 6.5
+        },
+        "Medium (150-249)": {
+          "n": 13086,
+          "mean": 6.91,
+          "p25": 6.5
+        },
+        "Heavy (250+)": {
+          "n": 7579,
+          "mean": 6.94,
+          "p25": 6.5
+        }
+      },
+      "White/Bleach": {
+        "Light (<150)": {
+          "n": 2664,
+          "mean": 7.14,
+          "p25": 6.0
+        },
+        "Medium (150-249)": {
+          "n": 20236,
+          "mean": 6.96,
+          "p25": 6.0
+        },
+        "Heavy (250+)": {
+          "n": 12063,
+          "mean": 6.95,
+          "p25": 6.5
+        }
+      }
+    }
+  },
+  "physical_violations": 4835,
+  "runtime_sec": 457.2
+}
