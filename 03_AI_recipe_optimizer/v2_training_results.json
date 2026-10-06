@@ -1,0 +1,3849 @@
+﻿{
+  "generated": "2026-09-04T23:43:08",
+  "total_models": 36,
+  "training_rows": 216405,
+  "features_v2": 31,
+  "features_v1": 23,
+  "improvements": [
+    "1. K-means color-depth sub-stratification (Pale/Light/Medium/Vivid) of Light/Medium",
+    "2. Is_2Part + Is_NextBatch + Is_Finished + Is_ReProcess binary features",
+    "3. Optuna Bayesian hyperparameter tuning (20 trials, TPE sampler)",
+    "4. 5-fold stratified cross-validation (StratifiedKFold on target quantile bins)",
+    "5. Stacking ensemble (Ridge meta-learner on OOF from XGB+LGB+RF+Ridge)",
+    "6. Quantile regression P10/P50/P90 via LightGBM quantile objective",
+    "7. White/Bleach rule-based override (Dye=0, Salt=0 for Next Batch)",
+    "8. SHAP TreeExplainer feature importance per stratum"
+  ],
+  "model_metrics": {
+    "Unit_A_Chem_g_per_kg_Pooled": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_A",
+      "target": "Chem_g_per_kg",
+      "color_depth_bin": "Pooled",
+      "model_type": "RandomForest",
+      "train_n": 123372,
+      "test_n": 30844,
+      "cv_mape": 15.56,
+      "test_mape": 15.27,
+      "test_r2": 0.9231,
+      "test_mae": 57.942,
+      "xgb_params": {
+        "n_estimators": 474,
+        "max_depth": 9,
+        "lr": 0.018187859051288217,
+        "sub": 0.7571172192068059,
+        "cbt": 0.7962072844310213,
+        "ra": 0.013783237455007183,
+        "rl": 1.6409286730647923,
+        "mcw": 6
+      },
+      "lgb_params": {
+        "n_estimators": 559,
+        "max_depth": 12,
+        "lr": 0.01303561122512888,
+        "sub": 0.5979914312095727,
+        "cbt": 0.522613644455269,
+        "ra": 0.09462175356461491,
+        "rl": 0.59890036722543,
+        "mcs": 34,
+        "nl": 170
+      }
+    },
+    "Unit_A_Water_Intensity_L_per_kg_Pooled": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_A",
+      "target": "Water_Intensity_L_per_kg",
+      "color_depth_bin": "Pooled",
+      "model_type": "RandomForest",
+      "train_n": 123372,
+      "test_n": 30844,
+      "cv_mape": 1.88,
+      "test_mape": 1.77,
+      "test_r2": 0.6041,
+      "test_mae": 0.145,
+      "xgb_params": {
+        "n_estimators": 561,
+        "max_depth": 8,
+        "lr": 0.010636066512540286,
+        "sub": 0.9849549260809971,
+        "cbt": 0.9162213204002109,
+        "ra": 0.04335281794951567,
+        "rl": 0.23102018878452935,
+        "mcw": 6
+      },
+      "lgb_params": {
+        "n_estimators": 559,
+        "max_depth": 12,
+        "lr": 0.01303561122512888,
+        "sub": 0.5979914312095727,
+        "cbt": 0.522613644455269,
+        "ra": 0.09462175356461491,
+        "rl": 0.59890036722543,
+        "mcs": 34,
+        "nl": 170
+      }
+    },
+    "Unit_D_Chem_g_per_kg_Pooled": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_D",
+      "target": "Chem_g_per_kg",
+      "color_depth_bin": "Pooled",
+      "model_type": "Stack_Ridge",
+      "train_n": 49751,
+      "test_n": 12438,
+      "cv_mape": 15.84,
+      "test_mape": 16.89,
+      "test_r2": 0.9144,
+      "test_mae": 50.738,
+      "xgb_params": {
+        "n_estimators": 474,
+        "max_depth": 9,
+        "lr": 0.018187859051288217,
+        "sub": 0.7571172192068059,
+        "cbt": 0.7962072844310213,
+        "ra": 0.013783237455007183,
+        "rl": 1.6409286730647923,
+        "mcw": 6
+      },
+      "lgb_params": {
+        "n_estimators": 559,
+        "max_depth": 12,
+        "lr": 0.01303561122512888,
+        "sub": 0.5979914312095727,
+        "cbt": 0.522613644455269,
+        "ra": 0.09462175356461491,
+        "rl": 0.59890036722543,
+        "mcs": 34,
+        "nl": 170
+      }
+    },
+    "Unit_D_Water_Intensity_L_per_kg_Pooled": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_D",
+      "target": "Water_Intensity_L_per_kg",
+      "color_depth_bin": "Pooled",
+      "model_type": "RandomForest",
+      "train_n": 49751,
+      "test_n": 12438,
+      "cv_mape": 2.48,
+      "test_mape": 2.45,
+      "test_r2": 0.8607,
+      "test_mae": 0.246,
+      "xgb_params": {
+        "n_estimators": 561,
+        "max_depth": 8,
+        "lr": 0.010636066512540286,
+        "sub": 0.9849549260809971,
+        "cbt": 0.9162213204002109,
+        "ra": 0.04335281794951567,
+        "rl": 0.23102018878452935,
+        "mcw": 6
+      },
+      "lgb_params": {
+        "n_estimators": 559,
+        "max_depth": 12,
+        "lr": 0.01303561122512888,
+        "sub": 0.5979914312095727,
+        "cbt": 0.522613644455269,
+        "ra": 0.09462175356461491,
+        "rl": 0.59890036722543,
+        "mcs": 34,
+        "nl": 170
+      }
+    },
+    "Unit_A_Salt_g_per_kg_Pale": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_A",
+      "target": "Salt_g_per_kg",
+      "color_depth_bin": "Pale",
+      "model_type": "XGBoost",
+      "train_n": 5658,
+      "test_n": 1414,
+      "cv_mape": 26.57,
+      "test_mape": 36.59,
+      "test_r2": -0.1176,
+      "test_mae": 1.327,
+      "xgb_params": {
+        "n_estimators": 203,
+        "max_depth": 9,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcw": 5
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_A_Salt_g_per_kg_Light": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_A",
+      "target": "Salt_g_per_kg",
+      "color_depth_bin": "Light",
+      "model_type": "Stack_Ridge",
+      "train_n": 31986,
+      "test_n": 7997,
+      "cv_mape": 26.83,
+      "test_mape": 37.18,
+      "test_r2": 0.2745,
+      "test_mae": 26.074,
+      "xgb_params": {
+        "n_estimators": 474,
+        "max_depth": 9,
+        "lr": 0.018187859051288217,
+        "sub": 0.7571172192068059,
+        "cbt": 0.7962072844310213,
+        "ra": 0.013783237455007183,
+        "rl": 1.6409286730647923,
+        "mcw": 6
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_A_Salt_g_per_kg_Medium": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_A",
+      "target": "Salt_g_per_kg",
+      "color_depth_bin": "Medium",
+      "model_type": "XGBoost",
+      "train_n": 17805,
+      "test_n": 4451,
+      "cv_mape": 26.7,
+      "test_mape": 22.9,
+      "test_r2": 0.3864,
+      "test_mae": 44.874,
+      "xgb_params": {
+        "n_estimators": 203,
+        "max_depth": 9,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcw": 5
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_A_Salt_g_per_kg_Vivid": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_A",
+      "target": "Salt_g_per_kg",
+      "color_depth_bin": "Vivid",
+      "model_type": "XGBoost",
+      "train_n": 34677,
+      "test_n": 8670,
+      "cv_mape": 12.98,
+      "test_mape": 12.45,
+      "test_r2": 0.5682,
+      "test_mae": 56.21,
+      "xgb_params": {
+        "n_estimators": 474,
+        "max_depth": 9,
+        "lr": 0.018187859051288217,
+        "sub": 0.7571172192068059,
+        "cbt": 0.7962072844310213,
+        "ra": 0.013783237455007183,
+        "rl": 1.6409286730647923,
+        "mcw": 6
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_A_Salt_g_per_kg_Dark": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_A",
+      "target": "Salt_g_per_kg",
+      "color_depth_bin": "Dark",
+      "model_type": "Stack_Ridge",
+      "train_n": 13245,
+      "test_n": 3312,
+      "cv_mape": 19.11,
+      "test_mape": 19.19,
+      "test_r2": 0.5261,
+      "test_mae": 62.709,
+      "xgb_params": {
+        "n_estimators": 474,
+        "max_depth": 9,
+        "lr": 0.018187859051288217,
+        "sub": 0.7571172192068059,
+        "cbt": 0.7962072844310213,
+        "ra": 0.013783237455007183,
+        "rl": 1.6409286730647923,
+        "mcw": 6
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_A_Salt_g_per_kg_White": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_A",
+      "target": "Salt_g_per_kg",
+      "color_depth_bin": "White",
+      "model_type": "XGBoost",
+      "train_n": 20001,
+      "test_n": 5000,
+      "cv_mape": 52.07,
+      "test_mape": 80.86,
+      "test_r2": 0.5842,
+      "test_mae": 4.745,
+      "xgb_params": {
+        "n_estimators": 561,
+        "max_depth": 8,
+        "lr": 0.010636066512540286,
+        "sub": 0.9849549260809971,
+        "cbt": 0.9162213204002109,
+        "ra": 0.04335281794951567,
+        "rl": 0.23102018878452935,
+        "mcw": 6
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_A_Dye_g_per_kg_Light": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_A",
+      "target": "Dye_g_per_kg",
+      "color_depth_bin": "Light",
+      "model_type": "XGBoost",
+      "train_n": 6837,
+      "test_n": 1737,
+      "cv_mape": 17.44,
+      "test_mape": 16.85,
+      "test_r2": 0.1472,
+      "test_mae": 0.247,
+      "xgb_params": {
+        "n_estimators": 203,
+        "max_depth": 9,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcw": 5
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_A_Dye_g_per_kg_Medium": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_A",
+      "target": "Dye_g_per_kg",
+      "color_depth_bin": "Medium",
+      "model_type": "XGBoost",
+      "train_n": 17805,
+      "test_n": 4451,
+      "cv_mape": 53.12,
+      "test_mape": 50.98,
+      "test_r2": 0.183,
+      "test_mae": 2.79,
+      "xgb_params": {
+        "n_estimators": 203,
+        "max_depth": 9,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcw": 5
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_A_Dye_g_per_kg_Vivid": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_A",
+      "target": "Dye_g_per_kg",
+      "color_depth_bin": "Vivid",
+      "model_type": "Stack_Ridge",
+      "train_n": 34677,
+      "test_n": 8670,
+      "cv_mape": 33.19,
+      "test_mape": 33.57,
+      "test_r2": 0.3207,
+      "test_mae": 16.776,
+      "xgb_params": {
+        "n_estimators": 203,
+        "max_depth": 9,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcw": 5
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_A_Dye_g_per_kg_Dark": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_A",
+      "target": "Dye_g_per_kg",
+      "color_depth_bin": "Dark",
+      "model_type": "Stack_Ridge",
+      "train_n": 12877,
+      "test_n": 3207,
+      "cv_mape": 53.08,
+      "test_mape": 47.93,
+      "test_r2": 0.4571,
+      "test_mae": 14.08,
+      "xgb_params": {
+        "n_estimators": 474,
+        "max_depth": 9,
+        "lr": 0.018187859051288217,
+        "sub": 0.7571172192068059,
+        "cbt": 0.7962072844310213,
+        "ra": 0.013783237455007183,
+        "rl": 1.6409286730647923,
+        "mcw": 6
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_A_Alkali_g_per_kg_Pale": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_A",
+      "target": "Alkali_g_per_kg",
+      "color_depth_bin": "Pale",
+      "model_type": "XGBoost",
+      "train_n": 5658,
+      "test_n": 1414,
+      "cv_mape": 532.79,
+      "test_mape": 118.26,
+      "test_r2": 0.5425,
+      "test_mae": 0.772,
+      "xgb_params": {
+        "n_estimators": 203,
+        "max_depth": 9,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcw": 5
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_A_Alkali_g_per_kg_Light": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_A",
+      "target": "Alkali_g_per_kg",
+      "color_depth_bin": "Light",
+      "model_type": "XGBoost",
+      "train_n": 31986,
+      "test_n": 7997,
+      "cv_mape": 27.65,
+      "test_mape": 23.15,
+      "test_r2": 0.5681,
+      "test_mae": 12.754,
+      "xgb_params": {
+        "n_estimators": 474,
+        "max_depth": 9,
+        "lr": 0.018187859051288217,
+        "sub": 0.7571172192068059,
+        "cbt": 0.7962072844310213,
+        "ra": 0.013783237455007183,
+        "rl": 1.6409286730647923,
+        "mcw": 6
+      },
+      "lgb_params": {
+        "n_estimators": 559,
+        "max_depth": 12,
+        "lr": 0.01303561122512888,
+        "sub": 0.5979914312095727,
+        "cbt": 0.522613644455269,
+        "ra": 0.09462175356461491,
+        "rl": 0.59890036722543,
+        "mcs": 34,
+        "nl": 170
+      }
+    },
+    "Unit_A_Alkali_g_per_kg_Medium": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_A",
+      "target": "Alkali_g_per_kg",
+      "color_depth_bin": "Medium",
+      "model_type": "XGBoost",
+      "train_n": 17805,
+      "test_n": 4451,
+      "cv_mape": 16.94,
+      "test_mape": 15.83,
+      "test_r2": 0.6042,
+      "test_mae": 17.348,
+      "xgb_params": {
+        "n_estimators": 203,
+        "max_depth": 9,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcw": 5
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_A_Alkali_g_per_kg_Vivid": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_A",
+      "target": "Alkali_g_per_kg",
+      "color_depth_bin": "Vivid",
+      "model_type": "XGBoost",
+      "train_n": 34677,
+      "test_n": 8670,
+      "cv_mape": 28.42,
+      "test_mape": 28.26,
+      "test_r2": 0.5574,
+      "test_mae": 27.49,
+      "xgb_params": {
+        "n_estimators": 203,
+        "max_depth": 9,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcw": 5
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_A_Alkali_g_per_kg_Dark": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_A",
+      "target": "Alkali_g_per_kg",
+      "color_depth_bin": "Dark",
+      "model_type": "XGBoost",
+      "train_n": 13245,
+      "test_n": 3312,
+      "cv_mape": 33.4,
+      "test_mape": 33.56,
+      "test_r2": 0.4055,
+      "test_mae": 29.031,
+      "xgb_params": {
+        "n_estimators": 203,
+        "max_depth": 9,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcw": 5
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_A_Alkali_g_per_kg_White": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_A",
+      "target": "Alkali_g_per_kg",
+      "color_depth_bin": "White",
+      "model_type": "Stack_Ridge",
+      "train_n": 20001,
+      "test_n": 5000,
+      "cv_mape": 229.31,
+      "test_mape": 245.58,
+      "test_r2": 0.7004,
+      "test_mae": 5.557,
+      "xgb_params": {
+        "n_estimators": 203,
+        "max_depth": 9,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcw": 5
+      },
+      "lgb_params": {
+        "n_estimators": 559,
+        "max_depth": 12,
+        "lr": 0.01303561122512888,
+        "sub": 0.5979914312095727,
+        "cbt": 0.522613644455269,
+        "ra": 0.09462175356461491,
+        "rl": 0.59890036722543,
+        "mcs": 34,
+        "nl": 170
+      }
+    },
+    "Unit_D_Salt_g_per_kg_Pale": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_D",
+      "target": "Salt_g_per_kg",
+      "color_depth_bin": "Pale",
+      "model_type": "Ridge",
+      "train_n": 4642,
+      "test_n": 1161,
+      "cv_mape": 999.0,
+      "test_mape": 999.0,
+      "test_r2": 0.0,
+      "test_mae": 0.034,
+      "xgb_params": {
+        "n_estimators": 253,
+        "max_depth": 4,
+        "lr": 0.011450964268326641,
+        "sub": 0.6626651653816322,
+        "cbt": 0.6943386448447411,
+        "ra": 0.06516990611177176,
+        "rl": 4.544383960336017,
+        "mcw": 9
+      },
+      "lgb_params": {
+        "n_estimators": 509,
+        "max_depth": 9,
+        "lr": 0.011492999300221412,
+        "sub": 0.8037724259507192,
+        "cbt": 0.5852620618436457,
+        "ra": 0.015673095467235415,
+        "rl": 7.902619549708233,
+        "mcs": 97,
+        "nl": 166
+      }
+    },
+    "Unit_D_Salt_g_per_kg_Light": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_D",
+      "target": "Salt_g_per_kg",
+      "color_depth_bin": "Light",
+      "model_type": "XGBoost",
+      "train_n": 16641,
+      "test_n": 4160,
+      "cv_mape": 31.13,
+      "test_mape": 30.27,
+      "test_r2": 0.2479,
+      "test_mae": 31.601,
+      "xgb_params": {
+        "n_estimators": 474,
+        "max_depth": 9,
+        "lr": 0.018187859051288217,
+        "sub": 0.7571172192068059,
+        "cbt": 0.7962072844310213,
+        "ra": 0.013783237455007183,
+        "rl": 1.6409286730647923,
+        "mcw": 6
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_D_Salt_g_per_kg_Medium": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_D",
+      "target": "Salt_g_per_kg",
+      "color_depth_bin": "Medium",
+      "model_type": "XGBoost",
+      "train_n": 6744,
+      "test_n": 1686,
+      "cv_mape": 27.16,
+      "test_mape": 27.15,
+      "test_r2": 0.36,
+      "test_mae": 56.104,
+      "xgb_params": {
+        "n_estimators": 474,
+        "max_depth": 9,
+        "lr": 0.018187859051288217,
+        "sub": 0.7571172192068059,
+        "cbt": 0.7962072844310213,
+        "ra": 0.013783237455007183,
+        "rl": 1.6409286730647923,
+        "mcw": 6
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_D_Salt_g_per_kg_Vivid": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_D",
+      "target": "Salt_g_per_kg",
+      "color_depth_bin": "Vivid",
+      "model_type": "XGBoost",
+      "train_n": 8945,
+      "test_n": 2236,
+      "cv_mape": 12.99,
+      "test_mape": 12.7,
+      "test_r2": 0.4456,
+      "test_mae": 57.743,
+      "xgb_params": {
+        "n_estimators": 203,
+        "max_depth": 9,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcw": 5
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_D_Salt_g_per_kg_Dark": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_D",
+      "target": "Salt_g_per_kg",
+      "color_depth_bin": "Dark",
+      "model_type": "XGBoost",
+      "train_n": 4670,
+      "test_n": 1168,
+      "cv_mape": 19.1,
+      "test_mape": 17.4,
+      "test_r2": 0.4635,
+      "test_mae": 67.311,
+      "xgb_params": {
+        "n_estimators": 203,
+        "max_depth": 9,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcw": 5
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_D_Salt_g_per_kg_White": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_D",
+      "target": "Salt_g_per_kg",
+      "color_depth_bin": "White",
+      "model_type": "Stack_Ridge",
+      "train_n": 8109,
+      "test_n": 2027,
+      "cv_mape": 59.59,
+      "test_mape": 59.27,
+      "test_r2": 0.3984,
+      "test_mae": 3.447,
+      "xgb_params": {
+        "n_estimators": 561,
+        "max_depth": 8,
+        "lr": 0.010636066512540286,
+        "sub": 0.9849549260809971,
+        "cbt": 0.9162213204002109,
+        "ra": 0.04335281794951567,
+        "rl": 0.23102018878452935,
+        "mcw": 6
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_D_Dye_g_per_kg_Light": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_D",
+      "target": "Dye_g_per_kg",
+      "color_depth_bin": "Light",
+      "model_type": "XGBoost",
+      "train_n": 3403,
+      "test_n": 891,
+      "cv_mape": 18.03,
+      "test_mape": 17.03,
+      "test_r2": 0.0488,
+      "test_mae": 0.251,
+      "xgb_params": {
+        "n_estimators": 203,
+        "max_depth": 9,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcw": 5
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_D_Dye_g_per_kg_Medium": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_D",
+      "target": "Dye_g_per_kg",
+      "color_depth_bin": "Medium",
+      "model_type": "XGBoost",
+      "train_n": 6744,
+      "test_n": 1686,
+      "cv_mape": 53.01,
+      "test_mape": 52.27,
+      "test_r2": 0.1686,
+      "test_mae": 2.722,
+      "xgb_params": {
+        "n_estimators": 203,
+        "max_depth": 9,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcw": 5
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_D_Dye_g_per_kg_Vivid": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_D",
+      "target": "Dye_g_per_kg",
+      "color_depth_bin": "Vivid",
+      "model_type": "XGBoost",
+      "train_n": 8945,
+      "test_n": 2236,
+      "cv_mape": 25.33,
+      "test_mape": 24.78,
+      "test_r2": 0.453,
+      "test_mae": 11.178,
+      "xgb_params": {
+        "n_estimators": 203,
+        "max_depth": 9,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcw": 5
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_D_Dye_g_per_kg_Dark": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_D",
+      "target": "Dye_g_per_kg",
+      "color_depth_bin": "Dark",
+      "model_type": "Stack_Ridge",
+      "train_n": 4639,
+      "test_n": 1157,
+      "cv_mape": 32.92,
+      "test_mape": 32.18,
+      "test_r2": 0.4638,
+      "test_mae": 9.369,
+      "xgb_params": {
+        "n_estimators": 474,
+        "max_depth": 9,
+        "lr": 0.018187859051288217,
+        "sub": 0.7571172192068059,
+        "cbt": 0.7962072844310213,
+        "ra": 0.013783237455007183,
+        "rl": 1.6409286730647923,
+        "mcw": 6
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_D_Alkali_g_per_kg_Pale": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_D",
+      "target": "Alkali_g_per_kg",
+      "color_depth_bin": "Pale",
+      "model_type": "XGBoost",
+      "train_n": 4642,
+      "test_n": 1161,
+      "cv_mape": 42.12,
+      "test_mape": 41.59,
+      "test_r2": 0.6022,
+      "test_mae": 0.196,
+      "xgb_params": {
+        "n_estimators": 561,
+        "max_depth": 8,
+        "lr": 0.010636066512540286,
+        "sub": 0.9849549260809971,
+        "cbt": 0.9162213204002109,
+        "ra": 0.04335281794951567,
+        "rl": 0.23102018878452935,
+        "mcw": 6
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_D_Alkali_g_per_kg_Light": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_D",
+      "target": "Alkali_g_per_kg",
+      "color_depth_bin": "Light",
+      "model_type": "XGBoost",
+      "train_n": 16641,
+      "test_n": 4160,
+      "cv_mape": 19.5,
+      "test_mape": 19.21,
+      "test_r2": 0.3825,
+      "test_mae": 14.134,
+      "xgb_params": {
+        "n_estimators": 474,
+        "max_depth": 9,
+        "lr": 0.018187859051288217,
+        "sub": 0.7571172192068059,
+        "cbt": 0.7962072844310213,
+        "ra": 0.013783237455007183,
+        "rl": 1.6409286730647923,
+        "mcw": 6
+      },
+      "lgb_params": {
+        "n_estimators": 559,
+        "max_depth": 12,
+        "lr": 0.01303561122512888,
+        "sub": 0.5979914312095727,
+        "cbt": 0.522613644455269,
+        "ra": 0.09462175356461491,
+        "rl": 0.59890036722543,
+        "mcs": 34,
+        "nl": 170
+      }
+    },
+    "Unit_D_Alkali_g_per_kg_Medium": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_D",
+      "target": "Alkali_g_per_kg",
+      "color_depth_bin": "Medium",
+      "model_type": "XGBoost",
+      "train_n": 6744,
+      "test_n": 1686,
+      "cv_mape": 17.43,
+      "test_mape": 17.3,
+      "test_r2": 0.5337,
+      "test_mae": 20.816,
+      "xgb_params": {
+        "n_estimators": 474,
+        "max_depth": 9,
+        "lr": 0.018187859051288217,
+        "sub": 0.7571172192068059,
+        "cbt": 0.7962072844310213,
+        "ra": 0.013783237455007183,
+        "rl": 1.6409286730647923,
+        "mcw": 6
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_D_Alkali_g_per_kg_Vivid": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_D",
+      "target": "Alkali_g_per_kg",
+      "color_depth_bin": "Vivid",
+      "model_type": "XGBoost",
+      "train_n": 8945,
+      "test_n": 2236,
+      "cv_mape": 27.78,
+      "test_mape": 27.37,
+      "test_r2": 0.4143,
+      "test_mae": 27.905,
+      "xgb_params": {
+        "n_estimators": 203,
+        "max_depth": 9,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcw": 5
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_D_Alkali_g_per_kg_Dark": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_D",
+      "target": "Alkali_g_per_kg",
+      "color_depth_bin": "Dark",
+      "model_type": "XGBoost",
+      "train_n": 4670,
+      "test_n": 1168,
+      "cv_mape": 27.86,
+      "test_mape": 25.46,
+      "test_r2": 0.4592,
+      "test_mae": 25.859,
+      "xgb_params": {
+        "n_estimators": 474,
+        "max_depth": 9,
+        "lr": 0.018187859051288217,
+        "sub": 0.7571172192068059,
+        "cbt": 0.7962072844310213,
+        "ra": 0.013783237455007183,
+        "rl": 1.6409286730647923,
+        "mcw": 6
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    },
+    "Unit_D_Alkali_g_per_kg_White": {
+      "features": [
+        "Log_Fabric_Kg",
+        "GSM_Ord",
+        "LR",
+        "Month_sin",
+        "Month_cos",
+        "Year",
+        "Recipe_Lines",
+        "Log_Recipe_Lines",
+        "GSM_x_LogFab",
+        "LR_x_LogFab",
+        "Batch_Size_Ord",
+        "Is_2Part",
+        "Is_NextBatch",
+        "Is_Finished",
+        "Is_ReProcess",
+        "Shade_Dark/Extra Dark",
+        "Shade_Light/Medium Colored",
+        "Shade_White/Bleach",
+        "Fab_Composite",
+        "Fab_Fleece/Heavy",
+        "Fab_Interlock",
+        "Fab_Lycra S/J",
+        "Fab_Other",
+        "Fab_Rib Fabric",
+        "Fab_Single Jersey",
+        "CD_Dark",
+        "CD_Light",
+        "CD_Medium",
+        "CD_Pale",
+        "CD_Vivid",
+        "CD_White"
+      ],
+      "unit": "Unit_D",
+      "target": "Alkali_g_per_kg",
+      "color_depth_bin": "White",
+      "model_type": "XGBoost",
+      "train_n": 8109,
+      "test_n": 2027,
+      "cv_mape": 30.07,
+      "test_mape": 28.53,
+      "test_r2": 0.5436,
+      "test_mae": 4.978,
+      "xgb_params": {
+        "n_estimators": 203,
+        "max_depth": 9,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcw": 5
+      },
+      "lgb_params": {
+        "n_estimators": 203,
+        "max_depth": 11,
+        "lr": 0.08310795711416077,
+        "sub": 0.8645035840204937,
+        "cbt": 0.8856351733429728,
+        "ra": 0.016677615430197915,
+        "rl": 0.5211124595788266,
+        "mcs": 20,
+        "nl": 176
+      }
+    }
+  },
+  "v1_v2_comparison": [
+    {
+      "key": "Unit_A_Alkali_g_per_kg_Dark",
+      "v1": 36.6,
+      "v2": 33.56,
+      "delta": -3.039999999999999
+    },
+    {
+      "key": "Unit_A_Alkali_g_per_kg_Light",
+      "v1": 40.9,
+      "v2": 23.15,
+      "delta": -17.75
+    },
+    {
+      "key": "Unit_A_Chem_g_per_kg_Pooled",
+      "v1": 31.8,
+      "v2": 15.27,
+      "delta": -16.53
+    },
+    {
+      "key": "Unit_A_Dye_g_per_kg_Dark",
+      "v1": 61.7,
+      "v2": 47.93,
+      "delta": -13.770000000000003
+    },
+    {
+      "key": "Unit_A_Dye_g_per_kg_Light",
+      "v1": 251.4,
+      "v2": 16.85,
+      "delta": -234.55
+    },
+    {
+      "key": "Unit_A_Salt_g_per_kg_Dark",
+      "v1": 19.3,
+      "v2": 19.19,
+      "delta": -0.10999999999999943
+    },
+    {
+      "key": "Unit_A_Salt_g_per_kg_Light",
+      "v1": 64.7,
+      "v2": 37.18,
+      "delta": -27.520000000000003
+    },
+    {
+      "key": "Unit_A_Water_Intensity_L_per_kg_Pooled",
+      "v1": 1.7,
+      "v2": 1.77,
+      "delta": 0.07000000000000006
+    },
+    {
+      "key": "Unit_D_Alkali_g_per_kg_Dark",
+      "v1": 27.5,
+      "v2": 25.46,
+      "delta": -2.039999999999999
+    },
+    {
+      "key": "Unit_D_Alkali_g_per_kg_Light",
+      "v1": 34.6,
+      "v2": 19.21,
+      "delta": -15.39
+    },
+    {
+      "key": "Unit_D_Chem_g_per_kg_Pooled",
+      "v1": 26.8,
+      "v2": 16.89,
+      "delta": -9.91
+    },
+    {
+      "key": "Unit_D_Dye_g_per_kg_Dark",
+      "v1": 32.3,
+      "v2": 32.18,
+      "delta": -0.11999999999999744
+    },
+    {
+      "key": "Unit_D_Dye_g_per_kg_Light",
+      "v1": 207.8,
+      "v2": 17.03,
+      "delta": -190.77
+    },
+    {
+      "key": "Unit_D_Salt_g_per_kg_Dark",
+      "v1": 24.4,
+      "v2": 17.4,
+      "delta": -7.0
+    },
+    {
+      "key": "Unit_D_Salt_g_per_kg_Light",
+      "v1": 56.5,
+      "v2": 30.27,
+      "delta": -26.23
+    },
+    {
+      "key": "Unit_D_Water_Intensity_L_per_kg_Pooled",
+      "v1": 2.5,
+      "v2": 2.45,
+      "delta": -0.04999999999999982
+    }
+  ],
+  "shap_top10": {
+    "Unit_D_Chem_g_per_kg_Pooled": [
+      [
+        "CD_Vivid",
+        134.2838592529297
+      ],
+      [
+        "Recipe_Lines",
+        97.05044555664062
+      ],
+      [
+        "Shade_Dark/Extra Dark",
+        57.65395736694336
+      ],
+      [
+        "Log_Fabric_Kg",
+        50.42076110839844
+      ],
+      [
+        "CD_Medium",
+        30.55157470703125
+      ],
+      [
+        "LR",
+        16.879972457885742
+      ],
+      [
+        "Year",
+        13.80456829071045
+      ],
+      [
+        "LR_x_LogFab",
+        12.236438751220703
+      ],
+      [
+        "GSM_x_LogFab",
+        9.519728660583496
+      ],
+      [
+        "Is_2Part",
+        8.056258201599121
+      ]
+    ],
+    "Unit_A_Salt_g_per_kg_Pale": [
+      [
+        "Recipe_Lines",
+        2.9160799980163574
+      ],
+      [
+        "Year",
+        0.879020094871521
+      ],
+      [
+        "GSM_x_LogFab",
+        0.800171434879303
+      ],
+      [
+        "Month_cos",
+        0.6248406767845154
+      ],
+      [
+        "Month_sin",
+        0.49952271580696106
+      ],
+      [
+        "Fab_Interlock",
+        0.4046190083026886
+      ],
+      [
+        "Log_Fabric_Kg",
+        0.3635511100292206
+      ],
+      [
+        "Fab_Rib Fabric",
+        0.28712403774261475
+      ],
+      [
+        "Is_2Part",
+        0.1823415905237198
+      ],
+      [
+        "LR_x_LogFab",
+        0.17812980711460114
+      ]
+    ],
+    "Unit_A_Salt_g_per_kg_Light": [
+      [
+        "Recipe_Lines",
+        16.639387130737305
+      ],
+      [
+        "Log_Fabric_Kg",
+        7.895894527435303
+      ],
+      [
+        "Year",
+        6.805676460266113
+      ],
+      [
+        "LR_x_LogFab",
+        4.9743146896362305
+      ],
+      [
+        "GSM_x_LogFab",
+        4.8249592781066895
+      ],
+      [
+        "LR",
+        4.783356666564941
+      ],
+      [
+        "Month_sin",
+        3.918686866760254
+      ],
+      [
+        "Month_cos",
+        3.129577398300171
+      ],
+      [
+        "Is_2Part",
+        2.6015515327453613
+      ],
+      [
+        "Fab_Rib Fabric",
+        1.7967005968093872
+      ]
+    ],
+    "Unit_A_Salt_g_per_kg_Medium": [
+      [
+        "Recipe_Lines",
+        31.46221923828125
+      ],
+      [
+        "Log_Fabric_Kg",
+        17.42408561706543
+      ],
+      [
+        "LR",
+        10.411263465881348
+      ],
+      [
+        "LR_x_LogFab",
+        9.345967292785645
+      ],
+      [
+        "Year",
+        8.515405654907227
+      ],
+      [
+        "Is_2Part",
+        8.33932876586914
+      ],
+      [
+        "GSM_x_LogFab",
+        7.828591346740723
+      ],
+      [
+        "Month_sin",
+        5.72741174697876
+      ],
+      [
+        "Month_cos",
+        5.04771089553833
+      ],
+      [
+        "Fab_Rib Fabric",
+        1.9819083213806152
+      ]
+    ],
+    "Unit_A_Salt_g_per_kg_Vivid": [
+      [
+        "Recipe_Lines",
+        27.534013748168945
+      ],
+      [
+        "LR",
+        26.812881469726562
+      ],
+      [
+        "Year",
+        19.9669189453125
+      ],
+      [
+        "Log_Fabric_Kg",
+        18.187726974487305
+      ],
+      [
+        "Is_2Part",
+        17.764780044555664
+      ],
+      [
+        "LR_x_LogFab",
+        13.250470161437988
+      ],
+      [
+        "GSM_x_LogFab",
+        11.728568077087402
+      ],
+      [
+        "Month_cos",
+        8.101531028747559
+      ],
+      [
+        "Month_sin",
+        7.768601894378662
+      ],
+      [
+        "Fab_Composite",
+        3.993795156478882
+      ]
+    ],
+    "Unit_A_Salt_g_per_kg_Dark": [
+      [
+        "Recipe_Lines",
+        40.508602142333984
+      ],
+      [
+        "Year",
+        30.829130172729492
+      ],
+      [
+        "LR",
+        29.887847900390625
+      ],
+      [
+        "Log_Fabric_Kg",
+        16.267038345336914
+      ],
+      [
+        "LR_x_LogFab",
+        14.784467697143555
+      ],
+      [
+        "Month_sin",
+        12.652321815490723
+      ],
+      [
+        "GSM_x_LogFab",
+        12.288424491882324
+      ],
+      [
+        "Month_cos",
+        8.99533748626709
+      ],
+      [
+        "Is_2Part",
+        6.691842079162598
+      ],
+      [
+        "Fab_Composite",
+        3.749150276184082
+      ]
+    ],
+    "Unit_A_Salt_g_per_kg_White": [
+      [
+        "Recipe_Lines",
+        13.375250816345215
+      ],
+      [
+        "Log_Fabric_Kg",
+        4.984838485717773
+      ],
+      [
+        "Year",
+        4.945784091949463
+      ],
+      [
+        "GSM_x_LogFab",
+        2.435966968536377
+      ],
+      [
+        "LR_x_LogFab",
+        2.262924909591675
+      ],
+      [
+        "Fab_Lycra S/J",
+        2.101588010787964
+      ],
+      [
+        "Month_sin",
+        1.1409045457839966
+      ],
+      [
+        "GSM_Ord",
+        0.911848247051239
+      ],
+      [
+        "Month_cos",
+        0.6917291879653931
+      ],
+      [
+        "Is_2Part",
+        0.6678648591041565
+      ]
+    ],
+    "Unit_A_Dye_g_per_kg_Light": [
+      [
+        "Log_Fabric_Kg",
+        0.05750948563218117
+      ],
+      [
+        "Recipe_Lines",
+        0.05432169511914253
+      ],
+      [
+        "LR_x_LogFab",
+        0.05372363328933716
+      ],
+      [
+        "GSM_x_LogFab",
+        0.052185654640197754
+      ],
+      [
+        "Year",
+        0.04554259404540062
+      ],
+      [
+        "Month_cos",
+        0.03689742088317871
+      ],
+      [
+        "Month_sin",
+        0.03623908758163452
+      ],
+      [
+        "LR",
+        0.018123693764209747
+      ],
+      [
+        "Fab_Composite",
+        0.015168891288340092
+      ],
+      [
+        "Fab_Single Jersey",
+        0.012626362964510918
+      ]
+    ],
+    "Unit_A_Dye_g_per_kg_Medium": [
+      [
+        "Recipe_Lines",
+        1.0378738641738892
+      ],
+      [
+        "LR_x_LogFab",
+        0.5129203796386719
+      ],
+      [
+        "Log_Fabric_Kg",
+        0.5127649307250977
+      ],
+      [
+        "GSM_x_LogFab",
+        0.5037060379981995
+      ],
+      [
+        "Year",
+        0.4402804970741272
+      ],
+      [
+        "Month_sin",
+        0.3823765814304352
+      ],
+      [
+        "Month_cos",
+        0.34646356105804443
+      ],
+      [
+        "Is_2Part",
+        0.2469179332256317
+      ],
+      [
+        "LR",
+        0.16528698801994324
+      ],
+      [
+        "Fab_Rib Fabric",
+        0.1424410194158554
+      ]
+    ],
+    "Unit_A_Dye_g_per_kg_Vivid": [
+      [
+        "Log_Fabric_Kg",
+        5.13332986831665
+      ],
+      [
+        "Recipe_Lines",
+        5.091126918792725
+      ],
+      [
+        "LR",
+        3.638580322265625
+      ],
+      [
+        "Year",
+        3.3555970191955566
+      ],
+      [
+        "Is_2Part",
+        2.8003652095794678
+      ],
+      [
+        "GSM_x_LogFab",
+        2.5815935134887695
+      ],
+      [
+        "LR_x_LogFab",
+        2.480398416519165
+      ],
+      [
+        "Month_cos",
+        2.0217416286468506
+      ],
+      [
+        "Month_sin",
+        1.8585394620895386
+      ],
+      [
+        "Fab_Rib Fabric",
+        1.3891189098358154
+      ]
+    ],
+    "Unit_A_Dye_g_per_kg_Dark": [
+      [
+        "Recipe_Lines",
+        8.887046813964844
+      ],
+      [
+        "Year",
+        7.276556968688965
+      ],
+      [
+        "Log_Fabric_Kg",
+        4.2466607093811035
+      ],
+      [
+        "LR_x_LogFab",
+        3.248936414718628
+      ],
+      [
+        "GSM_x_LogFab",
+        2.972644567489624
+      ],
+      [
+        "Month_sin",
+        2.67905592918396
+      ],
+      [
+        "LR",
+        2.263363838195801
+      ],
+      [
+        "Month_cos",
+        2.188009738922119
+      ],
+      [
+        "Fab_Lycra S/J",
+        1.6965739727020264
+      ],
+      [
+        "Is_2Part",
+        1.5815242528915405
+      ]
+    ],
+    "Unit_A_Alkali_g_per_kg_Pale": [
+      [
+        "Recipe_Lines",
+        3.1392924785614014
+      ],
+      [
+        "Year",
+        0.7731751799583435
+      ],
+      [
+        "GSM_x_LogFab",
+        0.26848700642585754
+      ],
+      [
+        "Month_cos",
+        0.2646488845348358
+      ],
+      [
+        "Fab_Interlock",
+        0.2278379499912262
+      ],
+      [
+        "LR_x_LogFab",
+        0.21221043169498444
+      ],
+      [
+        "Log_Fabric_Kg",
+        0.19501572847366333
+      ],
+      [
+        "Month_sin",
+        0.1704595685005188
+      ],
+      [
+        "Fab_Rib Fabric",
+        0.11906032264232635
+      ],
+      [
+        "Fab_Single Jersey",
+        0.05661339312791824
+      ]
+    ],
+    "Unit_A_Alkali_g_per_kg_Light": [
+      [
+        "Recipe_Lines",
+        11.648588180541992
+      ],
+      [
+        "Log_Fabric_Kg",
+        4.511767387390137
+      ],
+      [
+        "LR",
+        3.76509690284729
+      ],
+      [
+        "GSM_x_LogFab",
+        2.710231304168701
+      ],
+      [
+        "Year",
+        2.6965506076812744
+      ],
+      [
+        "LR_x_LogFab",
+        2.6326305866241455
+      ],
+      [
+        "Is_2Part",
+        2.2032604217529297
+      ],
+      [
+        "Month_sin",
+        1.9832487106323242
+      ],
+      [
+        "Month_cos",
+        1.5345330238342285
+      ],
+      [
+        "Fab_Rib Fabric",
+        1.0595237016677856
+      ]
+    ],
+    "Unit_A_Alkali_g_per_kg_Medium": [
+      [
+        "Recipe_Lines",
+        20.577648162841797
+      ],
+      [
+        "Log_Fabric_Kg",
+        7.969888687133789
+      ],
+      [
+        "LR",
+        5.641604423522949
+      ],
+      [
+        "Is_2Part",
+        3.9752132892608643
+      ],
+      [
+        "Year",
+        3.6588127613067627
+      ],
+      [
+        "GSM_x_LogFab",
+        3.296896457672119
+      ],
+      [
+        "LR_x_LogFab",
+        3.0115602016448975
+      ],
+      [
+        "Month_sin",
+        2.2384486198425293
+      ],
+      [
+        "Month_cos",
+        2.083315372467041
+      ],
+      [
+        "Fab_Composite",
+        1.2961030006408691
+      ]
+    ],
+    "Unit_A_Alkali_g_per_kg_Vivid": [
+      [
+        "Recipe_Lines",
+        13.960396766662598
+      ],
+      [
+        "LR",
+        11.153825759887695
+      ],
+      [
+        "Log_Fabric_Kg",
+        10.246223449707031
+      ],
+      [
+        "GSM_x_LogFab",
+        6.943678379058838
+      ],
+      [
+        "Year",
+        5.698836326599121
+      ],
+      [
+        "LR_x_LogFab",
+        4.8010663986206055
+      ],
+      [
+        "Is_2Part",
+        4.245410919189453
+      ],
+      [
+        "Month_cos",
+        3.9249215126037598
+      ],
+      [
+        "Month_sin",
+        3.549882411956787
+      ],
+      [
+        "GSM_Ord",
+        1.9042888879776
+      ]
+    ],
+    "Unit_A_Alkali_g_per_kg_Dark": [
+      [
+        "Recipe_Lines",
+        14.763487815856934
+      ],
+      [
+        "Log_Fabric_Kg",
+        9.688467979431152
+      ],
+      [
+        "GSM_x_LogFab",
+        7.0992889404296875
+      ],
+      [
+        "LR_x_LogFab",
+        5.808126926422119
+      ],
+      [
+        "LR",
+        5.368195056915283
+      ],
+      [
+        "Year",
+        5.248152256011963
+      ],
+      [
+        "Month_sin",
+        3.5584187507629395
+      ],
+      [
+        "Month_cos",
+        3.2957589626312256
+      ],
+      [
+        "Is_2Part",
+        1.889810562133789
+      ],
+      [
+        "Fab_Lycra S/J",
+        1.3703789710998535
+      ]
+    ],
+    "Unit_A_Alkali_g_per_kg_White": [
+      [
+        "Recipe_Lines",
+        10.518746376037598
+      ],
+      [
+        "Log_Fabric_Kg",
+        2.0079588890075684
+      ],
+      [
+        "Year",
+        1.907294750213623
+      ],
+      [
+        "GSM_x_LogFab",
+        1.1901655197143555
+      ],
+      [
+        "LR_x_LogFab",
+        1.0644923448562622
+      ],
+      [
+        "LR",
+        0.9118282794952393
+      ],
+      [
+        "Month_sin",
+        0.8759165406227112
+      ],
+      [
+        "Month_cos",
+        0.6705427765846252
+      ],
+      [
+        "Is_2Part",
+        0.5016820430755615
+      ],
+      [
+        "Fab_Lycra S/J",
+        0.48993006348609924
+      ]
+    ],
+    "Unit_D_Salt_g_per_kg_Light": [
+      [
+        "Log_Fabric_Kg",
+        18.497398376464844
+      ],
+      [
+        "Recipe_Lines",
+        15.580294609069824
+      ],
+      [
+        "LR_x_LogFab",
+        8.1227445602417
+      ],
+      [
+        "Year",
+        7.645559310913086
+      ],
+      [
+        "GSM_x_LogFab",
+        6.808381080627441
+      ],
+      [
+        "Month_cos",
+        4.769014358520508
+      ],
+      [
+        "Month_sin",
+        4.3899431228637695
+      ],
+      [
+        "Fab_Rib Fabric",
+        3.0605318546295166
+      ],
+      [
+        "Is_2Part",
+        2.7261483669281006
+      ],
+      [
+        "LR",
+        2.6296310424804688
+      ]
+    ],
+    "Unit_D_Salt_g_per_kg_Medium": [
+      [
+        "Log_Fabric_Kg",
+        39.1693115234375
+      ],
+      [
+        "Recipe_Lines",
+        26.886703491210938
+      ],
+      [
+        "GSM_x_LogFab",
+        12.247075080871582
+      ],
+      [
+        "LR_x_LogFab",
+        11.792853355407715
+      ],
+      [
+        "Year",
+        10.685619354248047
+      ],
+      [
+        "Is_2Part",
+        10.322196006774902
+      ],
+      [
+        "LR",
+        6.829897403717041
+      ],
+      [
+        "Month_sin",
+        6.373235702514648
+      ],
+      [
+        "Month_cos",
+        6.150864601135254
+      ],
+      [
+        "Fab_Rib Fabric",
+        2.74817156791687
+      ]
+    ],
+    "Unit_D_Salt_g_per_kg_Vivid": [
+      [
+        "Is_2Part",
+        23.477811813354492
+      ],
+      [
+        "Log_Fabric_Kg",
+        23.174983978271484
+      ],
+      [
+        "LR",
+        18.810020446777344
+      ],
+      [
+        "Recipe_Lines",
+        18.40395736694336
+      ],
+      [
+        "LR_x_LogFab",
+        17.329296112060547
+      ],
+      [
+        "Year",
+        14.803398132324219
+      ],
+      [
+        "GSM_x_LogFab",
+        13.093303680419922
+      ],
+      [
+        "Month_sin",
+        9.698458671569824
+      ],
+      [
+        "Month_cos",
+        7.814785957336426
+      ],
+      [
+        "Fab_Rib Fabric",
+        4.683018207550049
+      ]
+    ],
+    "Unit_D_Salt_g_per_kg_Dark": [
+      [
+        "LR_x_LogFab",
+        32.41361999511719
+      ],
+      [
+        "Year",
+        30.937828063964844
+      ],
+      [
+        "Recipe_Lines",
+        29.566425323486328
+      ],
+      [
+        "LR",
+        21.630531311035156
+      ],
+      [
+        "Log_Fabric_Kg",
+        17.229000091552734
+      ],
+      [
+        "GSM_x_LogFab",
+        12.885197639465332
+      ],
+      [
+        "Batch_Size_Ord",
+        12.353525161743164
+      ],
+      [
+        "Month_cos",
+        10.448090553283691
+      ],
+      [
+        "Month_sin",
+        9.519009590148926
+      ],
+      [
+        "Fab_Rib Fabric",
+        8.273229598999023
+      ]
+    ],
+    "Unit_D_Salt_g_per_kg_White": [
+      [
+        "Recipe_Lines",
+        9.312877655029297
+      ],
+      [
+        "Year",
+        2.659921169281006
+      ],
+      [
+        "GSM_x_LogFab",
+        2.3845512866973877
+      ],
+      [
+        "Log_Fabric_Kg",
+        2.025463342666626
+      ],
+      [
+        "Month_cos",
+        1.5042665004730225
+      ],
+      [
+        "Month_sin",
+        1.444352626800537
+      ],
+      [
+        "GSM_Ord",
+        1.1107369661331177
+      ],
+      [
+        "Fab_Rib Fabric",
+        1.0578385591506958
+      ],
+      [
+        "LR_x_LogFab",
+        0.9189742803573608
+      ],
+      [
+        "Fab_Fleece/Heavy",
+        0.9079740643501282
+      ]
+    ],
+    "Unit_D_Dye_g_per_kg_Light": [
+      [
+        "GSM_x_LogFab",
+        0.058518186211586
+      ],
+      [
+        "Log_Fabric_Kg",
+        0.056864287704229355
+      ],
+      [
+        "LR_x_LogFab",
+        0.05194464325904846
+      ],
+      [
+        "Recipe_Lines",
+        0.04890245199203491
+      ],
+      [
+        "Year",
+        0.044390950351953506
+      ],
+      [
+        "Month_sin",
+        0.035602886229753494
+      ],
+      [
+        "Month_cos",
+        0.030552012845873833
+      ],
+      [
+        "Fab_Lycra S/J",
+        0.021884720772504807
+      ],
+      [
+        "LR",
+        0.01743769831955433
+      ],
+      [
+        "Is_2Part",
+        0.011690550483763218
+      ]
+    ],
+    "Unit_D_Dye_g_per_kg_Medium": [
+      [
+        "Recipe_Lines",
+        1.240933895111084
+      ],
+      [
+        "GSM_x_LogFab",
+        0.6381694674491882
+      ],
+      [
+        "Year",
+        0.6169542074203491
+      ],
+      [
+        "Log_Fabric_Kg",
+        0.6051564812660217
+      ],
+      [
+        "LR_x_LogFab",
+        0.5777221918106079
+      ],
+      [
+        "Month_cos",
+        0.37104013562202454
+      ],
+      [
+        "Month_sin",
+        0.35840702056884766
+      ],
+      [
+        "Is_2Part",
+        0.3564288914203644
+      ],
+      [
+        "Fab_Rib Fabric",
+        0.1751910001039505
+      ],
+      [
+        "LR",
+        0.16538184881210327
+      ]
+    ],
+    "Unit_D_Dye_g_per_kg_Vivid": [
+      [
+        "Is_2Part",
+        3.756054639816284
+      ],
+      [
+        "Log_Fabric_Kg",
+        3.535163164138794
+      ],
+      [
+        "Year",
+        3.5139591693878174
+      ],
+      [
+        "Recipe_Lines",
+        3.274359703063965
+      ],
+      [
+        "LR",
+        3.1450088024139404
+      ],
+      [
+        "LR_x_LogFab",
+        2.5021636486053467
+      ],
+      [
+        "GSM_x_LogFab",
+        2.445410966873169
+      ],
+      [
+        "Month_sin",
+        2.012082576751709
+      ],
+      [
+        "Month_cos",
+        1.7108969688415527
+      ],
+      [
+        "Fab_Lycra S/J",
+        1.4537489414215088
+      ]
+    ],
+    "Unit_D_Dye_g_per_kg_Dark": [
+      [
+        "Year",
+        4.778552055358887
+      ],
+      [
+        "LR",
+        4.667891025543213
+      ],
+      [
+        "Recipe_Lines",
+        4.287493705749512
+      ],
+      [
+        "Log_Fabric_Kg",
+        3.0592315196990967
+      ],
+      [
+        "LR_x_LogFab",
+        2.6556944847106934
+      ],
+      [
+        "GSM_x_LogFab",
+        2.2147581577301025
+      ],
+      [
+        "Month_cos",
+        1.8391170501708984
+      ],
+      [
+        "Month_sin",
+        1.7289345264434814
+      ],
+      [
+        "Is_2Part",
+        1.5045925378799438
+      ],
+      [
+        "Fab_Rib Fabric",
+        1.1132760047912598
+      ]
+    ],
+    "Unit_D_Alkali_g_per_kg_Pale": [
+      [
+        "Recipe_Lines",
+        0.6663717031478882
+      ],
+      [
+        "GSM_x_LogFab",
+        0.14280027151107788
+      ],
+      [
+        "Fab_Interlock",
+        0.12687093019485474
+      ],
+      [
+        "Log_Fabric_Kg",
+        0.12325909733772278
+      ],
+      [
+        "Year",
+        0.12278132140636444
+      ],
+      [
+        "Month_sin",
+        0.0968661978840828
+      ],
+      [
+        "LR_x_LogFab",
+        0.08589241653680801
+      ],
+      [
+        "Fab_Single Jersey",
+        0.053042422980070114
+      ],
+      [
+        "LR",
+        0.03550831601023674
+      ],
+      [
+        "Fab_Fleece/Heavy",
+        0.03339586779475212
+      ]
+    ],
+    "Unit_D_Alkali_g_per_kg_Light": [
+      [
+        "Log_Fabric_Kg",
+        13.99694538116455
+      ],
+      [
+        "Recipe_Lines",
+        5.630364418029785
+      ],
+      [
+        "LR_x_LogFab",
+        3.2468907833099365
+      ],
+      [
+        "LR",
+        3.052414655685425
+      ],
+      [
+        "GSM_x_LogFab",
+        3.0103964805603027
+      ],
+      [
+        "Year",
+        2.96870493888855
+      ],
+      [
+        "Month_cos",
+        2.091493844985962
+      ],
+      [
+        "Month_sin",
+        1.8050283193588257
+      ],
+      [
+        "Fab_Rib Fabric",
+        1.5946471691131592
+      ],
+      [
+        "Is_2Part",
+        1.2220362424850464
+      ]
+    ],
+    "Unit_D_Alkali_g_per_kg_Medium": [
+      [
+        "Log_Fabric_Kg",
+        24.359411239624023
+      ],
+      [
+        "Recipe_Lines",
+        9.626646995544434
+      ],
+      [
+        "LR",
+        5.077820301055908
+      ],
+      [
+        "GSM_x_LogFab",
+        4.1707000732421875
+      ],
+      [
+        "Is_2Part",
+        4.081265926361084
+      ],
+      [
+        "LR_x_LogFab",
+        3.763984441757202
+      ],
+      [
+        "Year",
+        3.483448028564453
+      ],
+      [
+        "Month_cos",
+        2.320058584213257
+      ],
+      [
+        "Month_sin",
+        2.1786038875579834
+      ],
+      [
+        "Fab_Rib Fabric",
+        1.8414422273635864
+      ]
+    ],
+    "Unit_D_Alkali_g_per_kg_Vivid": [
+      [
+        "Log_Fabric_Kg",
+        11.569925308227539
+      ],
+      [
+        "Recipe_Lines",
+        10.482301712036133
+      ],
+      [
+        "GSM_x_LogFab",
+        8.476217269897461
+      ],
+      [
+        "LR_x_LogFab",
+        7.2831878662109375
+      ],
+      [
+        "Year",
+        7.144996166229248
+      ],
+      [
+        "Month_cos",
+        4.981655120849609
+      ],
+      [
+        "LR",
+        3.9952731132507324
+      ],
+      [
+        "Month_sin",
+        3.9936649799346924
+      ],
+      [
+        "Fab_Rib Fabric",
+        2.504960060119629
+      ],
+      [
+        "Is_2Part",
+        1.8742612600326538
+      ]
+    ],
+    "Unit_D_Alkali_g_per_kg_Dark": [
+      [
+        "Log_Fabric_Kg",
+        18.601808547973633
+      ],
+      [
+        "GSM_x_LogFab",
+        7.6855621337890625
+      ],
+      [
+        "Year",
+        7.520414352416992
+      ],
+      [
+        "Recipe_Lines",
+        6.701910018920898
+      ],
+      [
+        "LR_x_LogFab",
+        6.551766395568848
+      ],
+      [
+        "Month_sin",
+        5.471648693084717
+      ],
+      [
+        "Month_cos",
+        3.7161288261413574
+      ],
+      [
+        "LR",
+        2.9078376293182373
+      ],
+      [
+        "Fab_Rib Fabric",
+        1.8435864448547363
+      ],
+      [
+        "Fab_Single Jersey",
+        1.787288784980774
+      ]
+    ],
+    "Unit_D_Alkali_g_per_kg_White": [
+      [
+        "Recipe_Lines",
+        5.967857837677002
+      ],
+      [
+        "Log_Fabric_Kg",
+        3.027569055557251
+      ],
+      [
+        "Year",
+        2.065661668777466
+      ],
+      [
+        "GSM_x_LogFab",
+        1.9477251768112183
+      ],
+      [
+        "LR_x_LogFab",
+        1.3249447345733643
+      ],
+      [
+        "Month_sin",
+        0.9121432304382324
+      ],
+      [
+        "Month_cos",
+        0.8998215794563293
+      ],
+      [
+        "Fab_Rib Fabric",
+        0.8216457366943359
+      ],
+      [
+        "LR",
+        0.6069394946098328
+      ],
+      [
+        "Fab_Single Jersey",
+        0.3909909427165985
+      ]
+    ]
+  },
+  "color_depth_distribution": {
+    "Light": 60784,
+    "Vivid": 54528,
+    "White": 35137,
+    "Medium": 30686,
+    "Dark": 22395,
+    "Pale": 12875
+  },
+  "runtime_sec": 7245.6
+}
+
