@@ -1,372 +1,239 @@
-﻿# AI-Driven Closed-Loop Dyeing Intelligence System
-### Industrial Analytics Dashboard · Bangladesh Textile Industry
+# Master™ AI-Driven Closed-Loop Dyeing Intelligence System
+### Industrial Analytics Dashboard · Bangladesh Knit Textile Export Sector · Version 11
 
-> **A complete, field-deployed applied ML and industrial data-engineering project for Bangladesh's knit-fabric export sector. Covers the full data lifecycle  -  from raw proprietary SCADA telemetry to a production-hardened AI recipe optimizer  -  with an interactive analytics dashboard, bilingual operator interface, and verified digital ownership protection.**
+> **A complete, field-deployed applied ML and industrial data-engineering platform for Bangladesh's export wet-processing sector. Covers the entire data lifecycle — from decoding 9.995 GB of proprietary binary SCADA telemetry into 12 verified relational tables, to training a production-hardened AI recipe optimizer and batch planner with monotone physics constraints, an interactive 26-tab analytics workbench, bilingual natural language compiler (English / বাংলা), and cryptographically verified digital ownership protection.**
 
----
-
-## ⚡ Project Status
-
-| Milestone | Status |
-|-----------|--------|
-| Data engineering  -  9.995 GB SCADA telemetry → 12 relational tables | ✅ Complete |
-| Statistical analytics  -  97,655 alarm logs, 59-machine ANOVA | ✅ Complete |
-| AI recipe optimizer  -  multi-model ensemble, < 10 % MAPE on 5 KPIs | ✅ Complete |
-| Analytics dashboard **v11**  -  26 tabs, 18 interactive workbenches, 45/45 tests | ✅ Complete |
-| Operator manual **v11**  -  18 chapters, 35 sections, 7 figures | ✅ Complete |
-| Bilingual interface  -  English / বাংলা (940 labels, 91.9 % coverage) | ✅ Complete |
-| Ownership & integrity  -  PBKDF2-SHA256, tamper-guard, JSON-LD, SPDX | ✅ Complete |
-| Shadow-mode inline-sensor integration (Phase 2) | 🟡 Pending  -  sensor installation |
-| Constrained closed-loop deployment (Phase 3-4) | 🟡 Pending |
+[![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Machine Learning](https://img.shields.io/badge/Ensemble-XGBoost%20%7C%20LightGBM%20%7C%20Ridge-FF6F00)](https://github.com/dmlc/xgboost)
+[![SCADA Decoded](https://img.shields.io/badge/SCADA%20Telemetry-9.995%20GB%20%7C%20106.2M%20Points-008080)]()
+[![Production Batches](https://img.shields.io/badge/Production%20Batches-88%2C040%20%7C%2033.27%20M%20kg-4B0082)]()
+[![Bilingual UI](https://img.shields.io/badge/Interface-English%20%2F%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%20(92.2%25)-green)]()
+[![License](https://img.shields.io/badge/License-Proprietary%20%7C%20All%20Rights%20Reserved-red)]()
 
 ---
 
-## 🏭 Industrial Context
+## ⚡ Platform Status & Milestone Matrix
 
-Bangladesh's wet-processing industry faces a structural tri-fold crisis:
-
-- **Energy tariffs:** Natural gas costs have risen > 280 % since 2022. Generating 1 tonne of saturated steam (175 °C, 8 bar) costs ~৳2,394 ($19.70 USD). Each unnecessary wash cycle wastes 10-25 m³ of steam.
-- **Water scarcity:** Specific water consumption historically averaged 64-75 L/kg. Groundwater depletion is acute across Bangladesh's main textile manufacturing zones.
-- **ESG compliance mandates:** International retailers (H&M, C&A, Next, PUMA, Marks & Spencer) require measurable sustainability reporting  -  non-Right-First-Time (RFT) batches cost ~$265 per failed run in direct overhead.
-
-Traditional dyehouses run **open-loop**: recipes are estimated from laboratory trial cards, controller programs run static blind timers, and manual operator interventions create machine paralysis and water waste. This project builds the **data infrastructure and AI layer** to close that loop.
-
-### Verified Headline KPIs (from live SCADA data)
-
-| Metric | Value | Source |
-|--------|-------|--------|
-| Production batches in report | **88,040** | Production report |
-| Throughput | **33.27 M kg** | Production report |
-| First-pass RFT | **97.16 %** | Production report |
-| Additional-stage RFT (all machines) | **69.51 %** | Production report |
-| Additional-stage RFT (production machines) | **83.56 %** | Verified batch analysis |
-| Specific water consumption (closed-loop) | **60.6 L/kg** | SCADA telemetry (−5.6 % vs baseline) |
-| Total SCADA-logged batches | **98,012** | Master export |
-| Verified dosed production batches | **57,133** | Ghost-batch excision |
-| Alarm & consumption logs decoded | **97,655** | Binary telemetry |
-| Verified production batches (planner model) | **47,403** | Connection study (Aug 2025-Sep 2026) |
-| First-pass failure rate | **14.41 %** | Connection study |
-| UI labels (bilingual, English / বাংলা) | **940** | v11 test suite |
-| Intelligent alerts (from logs + ERP cards) | **30** | Manual ch. 6 |
+| Engineering Milestone | Scope & Measured Baseline | Verification Status | Primary Documentation |
+|---|---|---|---|
+| **Data Engineering** | 9.995 GB raw binary SCADA telemetry decoded into 12 relational tables | ✅ Complete | [`docs/Deep_Analysis_Findings.md`](docs/Deep_Analysis_Findings.md) |
+| **Data Integrity & Rescue** | 40,879 ghost batches excised (25 g cutoff); 21 misplaced decimals repaired (91.2 t saved) | ✅ Complete | [`docs/Deep_Analysis_Findings.md`](docs/Deep_Analysis_Findings.md) |
+| **Statistical Analytics** | 59-machine ANOVA ($F = 470.97, p < 10^{-290}$); 9 slower-heating vessels identified ($< 80 \%$ fleet median) | ✅ Complete | [`docs/AI_Dyeing_Technical_Summary.md`](docs/AI_Dyeing_Technical_Summary.md) |
+| **Causal Econometrics** | 47,179 batches analysed via fixed-effects logistic regression; 4 primary failure drivers isolated | ✅ Complete | [`docs/Data_Connections_and_Causal_Inference_Study.md`](docs/Data_Connections_and_Causal_Inference_Study.md) |
+| **AI Recipe & Step Models** | GBDT ensemble with monotone physics clamping; Lab dye % integration (34 % error reduction) | ✅ Complete | [`docs/Master_v11_Analytics_and_Accuracy_Report.md`](docs/Master_v11_Analytics_and_Accuracy_Report.md) |
+| **Anytime Run Forecaster** | Dynamic finish prediction replayed on 1,160 test runs (MAE 111.8 min, median 52.7 min) | ✅ Complete | [`docs/Master_v11_Analytics_and_Accuracy_Report.md`](docs/Master_v11_Analytics_and_Accuracy_Report.md) |
+| **Analytics Dashboard v11** | 26 analytical views, 18 interactive workbenches, 0 JS errors, 45/45 automated tests pass | ✅ Complete | [`docs/Master_v11_Zero_to_One_Methodology.md`](docs/Master_v11_Zero_to_One_Methodology.md) |
+| **Operator Manual v11** | 19 chapters, 35 sections, 7 embedded high-resolution figures, byte-exact embedded | ✅ Complete | [`docs/Master_v11_Zero_to_One_Methodology.md`](docs/Master_v11_Zero_to_One_Methodology.md) |
+| **Bilingual Smart Layer** | English / বাংলা (940 interface labels, 92.2 % coverage, ~0.25 s hot-switch) | ✅ Complete | [`docs/Master_v11_Zero_to_One_Methodology.md`](docs/Master_v11_Zero_to_One_Methodology.md) |
+| **Ownership & Integrity** | PBKDF2-SHA256 (600,000 iter), HMAC seal, DOM tamper-guard, registration legal pack | ✅ Complete | [`docs/Master_v11_Zero_to_One_Methodology.md`](docs/Master_v11_Zero_to_One_Methodology.md) |
+| **Inline Sensor Pilot (Phase 3–4)**| Modbus RTU / OPC-UA gateway, pH probes, toroidal conductivity, inline spectrophotometer | 🟡 In Progress | [`docs/PLC_AI_ClosedLoop_Review_FINAL.md`](docs/PLC_AI_ClosedLoop_Review_FINAL.md) |
+| **Constrained Write-Back (Phase 7)**| Closed-loop setpoint writeback bounded by hard PLC and SPC safety constraints (IEC 61511) | 🟡 Scheduled | [`docs/PLC_AI_ClosedLoop_Review_FINAL.md`](docs/PLC_AI_ClosedLoop_Review_FINAL.md) |
 
 ---
 
-## 🗂️ Project Architecture
+## 🏭 Industrial Context & Verified 2026 Economics
+
+Bangladesh's textile wet-processing export sector operates under severe resource constraints:
+- **Energy Tariffs:** Natural gas tariffs have escalated from ৳13.85 to **৳30.50 / m³ (+120.2 % increase)** under national regulatory adjustments. Generating 1 tonne of saturated steam (175 °C, 8 bar) costs **৳2,394 ($19.44 USD at ৳123.13/USD)**.
+- **Water Intensity & Effluent:** Fresh water inflow costs **৳42.00 / m³**, and Effluent Treatment Plant (ETP) biological/chemical discharge costs **৳91.65 / m³**, yielding a combined water cycle cost of **৳133.65 / m³ ($1.085 USD / m³)**.
+- **Rework & Capacity Penalty:** Non-Right-First-Time (RFT) batches cost an average of **৳32,629 ($265.00 USD)** per failed run in direct chemicals, steam, water, and labor loss. Machine paralysis carries an opportunity cost of **৳5,540.85 / machine-hour ($45.00 / hr)**.
+
+Traditional dyehouses run **open-loop**: recipes are estimated from laboratory trial cards, controller programs run static blind timers, and manual operator interventions cause severe machine stalls. This project builds the **data infrastructure, causal inference engine, and predictive AI layer** to close that loop.
+
+### Verified Headline KPIs (from Live SCADA Data)
+
+| Metric | Measured Value | Measurement Source & Statistical Scope |
+|---|---|---|
+| **Industrial Vessel Fleet** | **97 vessels** | 59 production machines (100–1,800 kg) + 38 sample machines |
+| **Production Report Batches** | **88,040 batches** | Master historical production tracking records |
+| **Cumulative Throughput** | **33.27 Million kg** | 100 % cotton, CVC, modal, viscose, and lycra blends |
+| **Decoded Telemetry Base** | **97,655 logs (9.995 GB)** | Binary `t_BatchLogData` (`c_Data` hex frames) |
+| **Decoded Sensor Samples** | **106,200,000 points** | 60-second sampling across 787,488 machine-hours |
+| **Decoded Alarm Switch-Ons** | **5,032,193 records** | Binary Type 23 alarm state transitions |
+| **Verified Dosed Production** | **57,133 batches** | Cost-optimal dosage gate (40,879 empty runs removed) |
+| **Specific Water Consumption** | **60.6 L/kg** | Native pulse meters (`t_BatchConsData`) (−5.6 % vs open-loop baseline) |
+| **Plain First-Pass RFT** | **97.16 %** | Batches completing with zero dispensed chemical additions |
+| **Additional-Stage RFT (Fleet)** | **83.56 %** | 53,302 production batches across 59 production machines |
+| **First-Pass Failure Rate** | **14.41 %** | Causal study (47,179 verified runs; additions or re-run within 45 days) |
+| **Addition Penalty Duration** | **+190 min (median extra)** | Batches with additions run 434 min longer (~7.2 h vs 5.88 h standard) |
+| **Inter-Batch Idle Time** | **0 min (IQR 0–4 min)** | 37,689 batch-to-batch transitions (reloads occur immediately) |
+| **Tagged Colour Library** | **5,087 unique colours** | 65.5 % coverage of active ERP cards with factory RGB tags |
+| **Bilingual Interface Labels** | **940 labels (92.2 %)** | English / বাংলা toggle (~0.25 s hot-switch) |
+| **Intelligent Active Alerts** | **30 alerts** | Slower heating, excessive waiting, and recipe drift |
+
+---
+
+## 🗂️ System Architecture: 6-Layer Engineering Pipeline
 
 ```
-AI Closed-Loop Dyeing System
+Master™ Closed-Loop Dyeing Intelligence System
 │
-├── LAYER 1 ─ Data Engineering (02_data_science_analysis/)
-│   └── 9.995 GB proprietary SCADA telemetry → 12 relational tables
-│       57,133 verified production batches (ghost-batch excised)
-│       97,655 alarm & consumption logs decoded from binary frames
+├── LAYER 1 ─ Data Engineering & Relational Splitting (02_data_science_analysis/)
+│   ├── 9.995 GB binary SCADA telemetry → 12 structured relational tables
+│   ├── 57,133 verified dosed production batches (40,879 empty ghost runs excised)
+│   ├── Surgical rescue of 21 misplaced decimals (91.2 t phantom chemicals saved / ৳116 M)
+│   └── Forensic binary frame unpacker: 106.2M analog values from c_Data hex strings
 │
-├── LAYER 2 ─ Statistical Analytics (02_data_science_analysis/)
-│   ├── One-way ANOVA (59 machines, F = 470.97, η² = 0.324, p < 1e-290)
-│   ├── K-Means clustering  -  shade taxonomy recovered at 78.24 %
-│   ├── Michaelis-Menten salt/exhaustion curve fitting (Km ≈ 38.2 g/L)
-│   ├── Welch's ANOVA (unequal-group, Levene p = 0.003)
-│   └── 10-fold stratified CV (CV R² 0.847 ± 0.031)
+├── LAYER 2 ─ Statistical Analytics & Fleet Degradation (02_data_science_analysis/)
+│   ├── One-way ANOVA across 59 machines (F = 470.97, η² = 0.324, p < 1e-290)
+│   ├── 9 slow-heating vessels identified (< 80 % fleet median heating rate)
+│   ├── Michaelis-Menten salt/exhaustion curve fitting (Km ≈ 38.2 g/L, Vmax ≈ 83.7 %)
+│   └── Unsupervised K-Means shade taxonomy recovery (78.24 % cluster accuracy)
 │
-├── LAYER 3 ─ AI Recipe Optimizer v1/v2 (03_AI_recipe_optimizer/)
-│   ├── Ridge / RandomForest / XGBoost / LightGBM ensemble
-│   ├── Stratified retraining on shade-category proportions
-│   ├── Validated against P25 best-quartile operator benchmark
-│   └── < 10 % MAPE on all 5 KPIs (salt, dye, water, alkali, cost)
+├── LAYER 3 ─ Causal Econometrics & Multi-Table Joins (docs/Data_Connections_and_Causal_Inference_Study.md)
+│   ├── Multi-variable logistic regression with machine, process, and month fixed effects
+│   ├── 4 primary failure drivers: Machine Memory (OR 1.33), Light-after-Dark (OR 1.20),
+│   │   New Colour Trial Penalty (OR 1.21), and Buyer Brand Risk Taxonomy (TNF OR 1.53 vs H&M OR 0.63)
+│   ├── Proven non-drivers: Shift A/B/C (p = 0.17), Day of Week (p = 0.82), Idle gaps >12h (p = 0.61)
+│   └── Buyer rework financial model: ৳32,629 ($265) risk premium per failed batch
 │
-├── LAYER 4 ─ V3 Chemical Tokeniser (04_AI_recipe_predictor_v3/)
-│   ├── NLP-inspired ingredient tokeniser (chemical fingerprinting)
-│   ├── Ingredient-level recipe generation CLI
-│   └── V3 dataset with per-chemical feature vectors
+├── LAYER 4 ─ AI Recipe Optimizer & Monotone Step Forecaster (03_AI_recipe_optimizer/)
+│   ├── Ridge / RandomForest / XGBoost / LightGBM ensemble with monotone physics constraints
+│   ├── Integration with Lab Dye % (Tab 2): 34 % salt error reduction, 26 % total chemical reduction
+│   ├── Monotone tree splits eliminating 100% of non-physical predictions across 11 dimensions
+│   └── Stratified 10-fold cross-validation preserving shade category proportions
 │
-├── LAYER 5 ─ Categorisation Intelligence (05_categorization_insights/)
-│   ├── 5-year deep root-cause analysis (Script 29)
-│   ├── Pricing & recipe intelligence
-│   └── Multi-dimensional permutation matrix
+├── LAYER 5 ─ Chemical Tokenizer & Formulation Intelligence (04_AI_recipe_predictor_v3/)
+│   ├── NLP-inspired ingredient tokenizer (chemical fingerprinting)
+│   ├── 5-year deep root-cause analysis (Script 29) & multi-dimensional permutation matrix
+│   └── Ingredient-level recipe generation CLI with 2026 ERP invoice valuation
 │
-└── LAYER 6 ─ Interactive Analytics Dashboard v11 + Operator Manual
-    ├── 26 analytical tabs  -  0 JS console errors  -  45/45 automated tests pass
-    ├── Bilingual spotlight command bar (English / বাংলা, Ctrl+K, 31 sentences tested)
-    ├── 21-parameter digital twin simulator (coupled closed-loop physics)
-    ├── 7-step AI batch planner with multi-objective machine ranking
-    ├── 18 interactive workbenches (inline calculators, simulators, ROC tools)
-    ├── PBKDF2-SHA256 (600,000 iter) ownership seal, JSON-LD, SPDX, tamper-guard
-    └── Embedded sealed manual v11 (18 chapters, 35 sections, 7 figures, SHA-256 verified)
+└── LAYER 6 ─ Interactive Master™ Analytics Dashboard v11 & Operator Manual
+    ├── 26 analytical views  ·  18 interactive workbenches  ·  0 console errors  ·  45/45 tests pass
+    ├── Bilingual spotlight command bar (Ctrl+K, English / বাংলা, 31 test sentences verified)
+    ├── Tab 24 AI Batch Planner: 8-step pipeline, live run-view, mid-batch edits
+    ├── Anytime Dynamic Run-View Forecaster (MAE 111.8 min, median 52.7 min across 1,160 replayed runs)
+    ├── Calibrated first-pass failure risk (logit p' = -0.639 + 0.706 logit p; calibration error 3.7 pts)
+    ├── PBKDF2-SHA256 (600,000 iter) ownership seal, DOM tamper-guard, JSON-LD, SPDX meta tags
+    └── Byte-exact embedded sealed manual v11 (19 chapters, 35 sections, 7 figures, SHA-256 verified)
 ```
 
 ---
 
-## 📊 Model Performance  -  vs. P25 Benchmark
+## 🎯 Model Accuracy & Empirical Verification (Chapter 19)
 
-The P25 benchmark is the 25th-percentile of best-quartile human operator decisions across all validated batches.
+All models are evaluated on a **temporal out-of-time split** representing real operational deployment: trained on historical batches prior to April 1, 2026, and evaluated prospectively on batches from April 1 to September 12, 2026.
 
-| KPI | Open-Loop Baseline | AI Model | P25 Benchmark | AI vs P25 |
-|-----|-------------------|---------|--------------|-----------|
-| Salt (g/kg) | 68.2 ± 14.3 | **MAPE 7.8 %** | 62.4 | ✅ Beats |
-| Dye total (g/kg) | 24.1 ± 8.7 | **MAPE 9.1 %** | 22.8 | ✅ Beats |
-| Water (L/kg) | 82.4 ± 31.2 | **MAPE 8.4 %** | 71.3 | ✅ Beats |
-| Chemical cost (Tk/kg) | 58.7 ± 19.4 | **MAPE 6.9 %** | 53.2 | ✅ Beats |
-| Alkali (g/kg) | 14.8 ± 4.2 | **MAPE 9.7 %** | 13.6 | ✅ Beats |
+![Master™ v11 Accuracy Card and Model Performance](docs/screenshots/manual_scr_accuracy.png)
 
-All five KPIs achieve < 10 % MAPE and beat the P25 benchmark.
+### The Master™ v11 Accuracy Card
+
+| Prediction Task | Module | Evaluation Cohort | Master™ v11 Error | Reference Heuristic | Performance Lift |
+|---|---|---|---|---|---|
+| **Salt (g/kg)** — Standard | Tab 2 | 22,887 cards (Jan–Aug 2026) | **MAE 45.4 g/kg** · $R^2 = 0.835$ | Colour's last 5 days: 51.6 | **12 % smaller error** |
+| **Alkali (g/kg)** — Standard | Tab 2 | 22,887 cards (Jan–Aug 2026) | **MAE 18.1 g/kg** · $R^2 = 0.745$ | Colour's last 5 days: 21.3 | **15 % smaller error** |
+| **Dye Total (g/kg)** | Tab 2 | 22,887 cards (Jan–Aug 2026) | **MAE 4.4 g/kg** · $R^2 = 0.885$ | Colour's last 5 days: 4.9 | **9 % smaller error** |
+| **All Chemicals (g/kg)** | Tab 2 | 22,887 cards (Jan–Aug 2026) | **MAE 70.8 g/kg** · $R^2 = 0.845$ | Colour's last 5 days: 84.5 | **16 % smaller error** |
+| **Recipe Cost (৳/kg)** | Tab 2 | 22,887 cards (Jan–Aug 2026) | **MAE ৳11.8/kg** · $R^2 = 0.849$ | Colour's last 5 days: 12.8 | **8 % smaller error** |
+| **Salt (g/kg)** — With Lab Dye % | Tab 2 | 22,887 cards (Jan–Aug 2026) | **MAE 30.1 g/kg** · $R^2 = 0.919$ | Without lab dye %: 45.4 (New: 76.6) | **34 % smaller error** |
+| **Alkali (g/kg)** — With Lab Dye % | Tab 2 | 22,887 cards (Jan–Aug 2026) | **MAE 15.1 g/kg** · $R^2 = 0.802$ | Without lab dye %: 18.1 (New: 26.3) | **16 % smaller error** |
+| **All Chemicals** — With Lab Dye % | Tab 2 | 22,887 cards (Jan–Aug 2026) | **MAE 52.8 g/kg** · $R^2 = 0.913$ | Without lab dye %: 70.8 (New: 113.9) | **26 % smaller error** |
+| **Recipe Cost** — With Lab Dye % | Tab 2 | 22,887 cards (Jan–Aug 2026) | **MAE ৳10.1/kg** · $R^2 = 0.895$ | Without lab dye %: 11.8 (New: 17.4) | **14 % smaller error** |
+| **Process Recommendation** | Tab 24 | 9,946 batches (Apr–Aug 2026) | **1st suggestion: 54.6 %** · Top-3: 74.0 % | Static history: 32.2 % / 66.6 % | **70 % higher accuracy** |
+| **New Colour Salt (with Lab %)** | Tab 24 | 2,284 new-colour cards | **MAE 32.0 g/kg** · Alkali: 16.7 · Cost: ৳17.32 | Without lab %: 87.5 / 69.8 / ৳23.33 | **26 % smaller error** |
+| **Program Step Duration** | Tab 24 | 720,740 execution steps | **MAE 3.22 min** across all step types | Controller programmed: 4.69 min | **31 % smaller error** |
+| **Inter-treatment Waiting** | Tab 24 | 65,526 treatments | **MAE 29.1 min** | Treatment median: 46.2 min | **37 % smaller error** |
+| **Batch Duration (Pre-Start)** | Tab 24 | 19,227 batches | **MAE 144.5 min** · Median: 78.8 min | Process median: 149.8 min | Matches/beats process median |
+| **Finish Time (Anytime In-Run)** | Tab 24 §7 | 1,160 replayed test batches | **MAE 111.8 min** · Median: 52.7 min | Step projection: 153.6 min | **27 % smaller error** |
+| **First-Pass Risk (Calibrated %)** | Tab 24 | 3,079 batches (Apr–Jul 2026) | **Predicted 21.5 % vs Observed 19.6 %** | Uncalibrated: 24.2 % (7.1 pt error) | **48 % lower error** |
+| **First-Pass Risk (Shade Check)** | Tab 24 §7 | 3,077 batches | **AUC 0.691** (Riskiest 20 % fails 45.3 % vs 13.2 %) | Order context only: AUC 0.593 | **17 % higher AUC** |
+| **First-Pass Risk (Pre-Batch)** | Tab 24 §3 | 3,077 batches | **AUC 0.667** · Average Precision 0.366 | Without Tab 25 factors: AP 0.334 | **10 % higher precision** |
+
+*Note: For the full mathematical report and anytime replayed benchmarks, see [`docs/Master_v11_Analytics_and_Accuracy_Report.md`](docs/Master_v11_Analytics_and_Accuracy_Report.md).*
 
 ---
 
-## 🖥️ Dashboard v11  -  Key Modules
+## 🔗 Causal Connections & Econometric Findings (Tab 25 / Chapter 18)
 
-The analytics dashboard is a self-contained, production-grade application built directly from the proprietary SCADA data.  
-**The HTML file and raw datasets are not published.** The screenshots below demonstrate the depth and scope of the implemented system.
+Tab 25 joins the chronological machine queue, colour recipe history, customer identity, and dispensed chemicals across **47,179 verified batches**.
 
-> The dashboard carries PBKDF2-SHA256 ownership seals (600,000 iterations), tamper-detection on the ownership notice, and an anti-copy / capture-block layer. Document ID: **SM-DASH-V11-SKM-2026**.
+![Master™ v11 Tab 25 Causal Findings and Connection Cards](docs/screenshots/manual_scr_causal_cards.png)
 
-### Executive Summary & Industrial Context
+### Four Primary Empirical Drivers of First-Pass Failure (Adjusted Logistic Regression)
 
-The opening panel quantifies the system's value creation and establishes the technical baseline from live SCADA data  -  97 factory vessels, 97,655 forensic telemetry logs, and a measured 5.6 % reduction in specific water consumption vs. the open-loop baseline.
+$$\text{logit}(P(\text{Failure}_{i})) = \beta_0 + \mathbf{X}_i \boldsymbol{\beta} + \text{Process}_{p(i)} + \text{Machine}_{m(i)} + \text{Month}_{t(i)}$$
 
+1. **Machines Remember Failure (Adjusted OR 1.33 [95 % CI 1.21–1.47], $p < 0.001$):**
+   The batch immediately following a failed batch on the same vessel fails **22.7 %** of the time, compared to **14.1 %** following a successful batch (114 excess failures/yr). *Action:* Mandatory pre-flight inspection of dosing valves, circulation pump, and cleanliness before loading.
+2. **Light-After-Dark Sequencing (Adjusted OR 1.20 [95 % CI 1.10–1.31], $p < 0.001$):**
+   Dyeing a light or medium shade after a dark shade fails **18.8 %** vs **13.0 %** after light/white (104 excess failures/yr). Intervening machine rinses did not eliminate this penalty in empirical logs. *Action:* Strict monotonic light-to-dark scheduling per vessel.
+3. **New Colour Trial Penalty (Adjusted OR 1.21 [95 % CI 1.13–1.29], $p < 0.001$):**
+   The 1st bulk run of a new colour fails **19.5 %**; runs 2–4 fail **17.7 %**; runs 32+ fail only **12.5 %** (219 excess failures/yr). *Action:* Treat first 4 bulk runs as trials with mandatory lab re-check and 60-min shade sampling.
+4. **Buyer Brand Risk Taxonomy ($p < 0.001$):**
+   Controlling for shade depth and fabric blend, failure rates range from 8.5 % to 28.2 %:
+   - **High Rework Risk:** The North Face (OR 1.53, 28.2 % fail, +৳4,487 risk premium/batch), Next (OR 1.48, 21.4 % fail, +৳2,274), VF Asia (OR 1.33, 20.6 % fail, +৳2,003), PUMA (OR 1.22, 19.7 % fail, +৳1,723).
+   - **Low Rework Risk:** C&A (OR 0.75, 11.2 % fail), GUESS (OR 0.54, 10.6 % fail), H&M (OR 0.63, 9.5 % fail), ZARA (OR 0.65, 8.5 % fail).
+
+*Empirical Non-Drivers Proven:* Shift schedule (A: 14.8 %, B: 14.3 %, C: 14.1 %, $p = 0.17$), day of week ($p = 0.82$), lab-to-bulk scale-up flag ($p = 0.570$), idle machine gap $> 12$ h ($p = 0.610$), and loading queue wait time.
+
+*For complete econometric specifications and financial tables, see [`docs/Data_Connections_and_Causal_Inference_Study.md`](docs/Data_Connections_and_Causal_Inference_Study.md).*
+
+---
+
+## 🖥️ Interactive Analytics Dashboard v11 (26 Tabs & Workbenches)
+
+The Master™ analytics dashboard is a self-contained, client-side application built from the verified SCADA archive.  
+**Document ID: `SM-DASH-V11-SKM-2026` · SHA-256: `28963eef2b6812bd6e3a3b5def79b5f3e757ff0a96dd40ed6f854ca9d43d73f8`**
+
+### Executive Overview & Headline KPIs
 ![Executive Summary panel with annual value creation, KPI counters, and commercial whitepaper](docs/screenshots/manual_scr_hero.png)
 
-### 25-Module Tab Directory
-
-The dashboard covers 26 analytical views  -  from raw telemetry decoding to executive ROI modelling  -  accessible by role (Operator, Technologist, Manager).
-
-![Tab directory listing all 26 modules by role: Technologist, Operator, Manager](docs/screenshots/manual_scr_tabs.png)
+### 26-Module Tab Directory & Role Navigation
+The dashboard structures 26 analytical views by operational role (Operator, Technologist, Manager):
+![Tab directory listing all 26 modules by role](docs/screenshots/manual_scr_tabs.png)
 
 ### Universal Command Bar & Bilingual NLP (Ctrl+K)
-
-A multi-index spotlight search and natural language order compiler. Tested on 31 English and Bangla sentences. Parses weight, colour, machine, fabric construction, liquor ratio, buyer shade code, and batch-split instructions in real time.
-
+Spotlight search and order compiler tested on 31 English and Bangla sentences:
 ![Command Bar: bilingual NLP parsing a production order into structured entity chips](docs/screenshots/manual_scr_nlp.png)
 
-### Physical Chemistry & Reactive Dosing Engine
+### Tab 24 — AI Batch Planner (8-Step Flow & Live Run View)
+8-step flow: 1 Order → 2 AI recipe & price → 3 Machine → 4 Program step-by-step → 5 Cost sensitivity → 6 Approve → 7 Live run view & finish → 8 Outcome feedback.
+![Master™ v11 - Tab 24 Batch Planner](docs/screenshots/manual_scr_planner.png)
 
-Covers the two-phase dye exhaustion / covalent fixation mechanism (vinyl sulfone chemistry), tri-level progressive salt dosing profiles (Linear / Progressive / De-Progressive curves), Rossacid vs. acetic acid neutralisation, and an interactive dosing calculator.
+### Live Machine Telemetry & Dynamic Run Traces
+Decoded from binary `c_Data` frames with live machine state and anytime finish projections:
+![Dynamic Run View and Anytime Finish Forecast](docs/screenshots/manual_scr_run_traces.png)
 
+### Physical Chemistry & Reactive Dosing Calculator
+Models two-phase exhaustion/fixation kinetics, vinyl sulphone chemistry, and tri-level dosing profiles:
 ![Physical chemistry section: reactive dye mechanism equations and tri-level dosing profiles](docs/screenshots/manual_scr_chemistry.png)
-
-### Interactive Reactive Dyeing Dosing Calculator
-
-Simulates electrolyte and alkaline buffer dosing curves from fabric weight, liquor ratio, and shade depth. Outputs total dyebath volume, Glauber's salt (g/L), soda ash dose, and the recommended dosing profile.
-
 ![Dosing calculator: 507 kg salt at 65 g/L for 1200 kg Navy Dark at LR 1:6.5](docs/screenshots/manual_scr_dosing_calc.png)
 
 ---
 
-## 🖥️ Dashboard v11  -  26 Tabs, 18 Interactive Workbenches
+## 📚 Operator Manual v11 (19 Chapters)
 
-The analytics dashboard (`Master™ v11  -  AI Closed-Loop Dyeing Analytics`, **Doc ID: SM-DASH-V11-SKM-2026**) is a 6.5 MB self-contained HTML application built directly from the proprietary SCADA data and ERP recipe cards.  
-**The HTML file and raw datasets are not published.** The manual screenshots below demonstrate the depth and scope.
+The companion operator handbook (`Master™ v11 — Zero-to-One Master Manual & Commercial Whitepaper`, **Doc ID: `SM-MAN-V11-SKM-2026` · SHA-256: `fe8a808d1c11cc28fb29ffa339e3986578e20fc5ee92d1b7a41e9e5cffa18130`**) is embedded byte-exact inside the dashboard:
 
-> Ownership layer: PBKDF2-SHA256 (600,000 iterations), tamper-detection on the ownership notice, JSON-LD `SoftwareApplication`, Dublin Core + SPDX meta tags, and an anti-copy / capture-block layer. Copyright notice is appended to copied text, job-sheet exports, and browser console.
+| Chapter | Title & Scope |
+|---|---|
+| **Ch. 1** | Executive Summary & Commercial Case (Gas +120 %, Steam $19.44/t, Water+ETP $1.085/m³, Assumptions) |
+| **Ch. 2** | The Data: 9.995 GB Master Export, Production Report & ERP Cards (12 verified tables, `c_Data` 28-byte frame) |
+| **Ch. 3** | Role-Based Operating Guide (Operator / Technologist / Manager daily routines) |
+| **Ch. 4** | Home and the Daily Routine (The 9 key KPI numbers, batch approvals, browser storage) |
+| **Ch. 5** | The Bar: Type an Order or a Question (Ctrl+K, 31 test sentences, multi-index search) |
+| **Ch. 6** | Smart Alerts (30 intelligent alerts: slower heating, waiting, recipe drift, hold cuts) |
+| **Ch. 7** | Tab 24 Batch Planner, Section by Section (8-step workflow, job sheets, in-run edits) |
+| **Ch. 8** | Reactive Dyeing Chemistry and Dosing (Vinyl sulphone activation, salt/soda ERP medians, dosing profiles) |
+| **Ch. 9** | The Twin and the Models (Digital twin simulator, GBDT error metrics, drivers of time and water) |
+| **Ch. 10** | Troubleshooting on the Shop Floor (Diagnostic decision trees, mechanical vs chemical faults) |
+| **Ch. 11** | Process Reference (Logged programs: 2201, 2202, 2203, 3312, 8010 run counts and standard durations) |
+| **Ch. 12** | Prices and Rates (Tab 18 registry: 2026 ERP commodity prices and utility tariffs) |
+| **Ch. 13** | Hardware and Roll-Out (24-week, 7-phase implementation plan; edge PCs, probes, gateways) |
+| **Ch. 14** | Home and the 25 Tabs (Comprehensive module walkthrough, input/output specifications) |
+| **Ch. 15** | Operator Cheat-Sheets (Bilingual quick-reference checklists: English · বাংলা) |
+| **Ch. 16** | FAQ and Glossary (RFT definitions, colour tags, controller limits, offline operation) |
+| **Ch. 17** | What Was Corrected in This Edition (Full 37-statement audit matrix and 11 further scientific corrections) |
+| **Ch. 18** | Connections Across the Data (Tab 25: 4 failure drivers, brand risk table, non-drivers proven) |
+| **Ch. 19** | How Accurate Is Every Number (Tab 25 Accuracy Card, anytime finish model, monotone physics constraints) |
 
-### Verified headline KPIs displayed on the dashboard Home
-
-| KPI card | Value |
-|----------|-------|
-| Monitored industrial fleet | **97 vessels** (59 production + 38 sample) |
-| Forensic telemetry base | **97,655 logs** (9.995 GB decoded SCADA data) |
-| Specific water usage | **60.6 L/kg** (−5.6 % vs historical baseline) |
-| Production report batches | **88,040** / **33.27 M kg** throughput |
-| First-pass RFT | **97.16 %** (no-addition batches) |
-| Add. RFT (production machines) | **83.56 %** (53,302 batches) |
-| Intelligent alerts | **30** (derived from logs + ERP cards) |
-
-### 18 Interactive Workbenches (extracted from the dashboard)
-
-| # | Workbench | Tab |
-|---|-----------|-----|
-| 1 | 📜 Interactive SOP Thermal & Chemical Trajectory Profile | Tab 12 |
-| 2 | 🔬 Ghost Batch Excision & Scientific Confusion Matrix ROC Workbench | Tab 5 |
-| 3 | 🚀 Edge Gateway Hardware Configurator & Commissioning Payback Calculator | Tab 13 |
-| 4 | 📡 SCADA Hardware-in-the-Loop (HIL) & Sensor Fault-Injection Suite | Tab 4 |
-| 5 | 🧠 Water-per-kg What-If Playground (linear model, 10,749 batches) | Tab analysis |
-| 6 | Easy Word & Terminology Replacer Workbench (Plain EN / Technical / Bengali) | Header |
-| 7 | ⚙️ Machine Health Index (MHI) & ANOVA Failure Forecaster | Tab 6 |
-| 8 | 🎲 Stochastic Monte Carlo Risk Simulation (1,000 cycles) | Modal |
-| 9 | 🧩 Multi-Variable Permutation Filter & Chemical Shock Risk Console | Tab 7 |
-| 10 | ⏱️ Equipment Paralysis & Lost Throughput Financial Workbench | Tab 10 |
-| 11 | 📊 Side-by-Side Batch Scenario Comparator | Modal |
-| 12 | 🔍 Universal Platform Search (colours, processes, machines, batches) | Header |
-| 13 | Factory Parameter Calibration, Cost Correcting & Override Center | Modal |
-| 14 | 🧠 MASTER Data Engineering & ML Platform  -  readiness + MVP prototypes | Tab 25 |
-| 15 | Executive Boardroom Audit & Enterprise ROI Summary | Header modal |
-| 16 | AI Batch Planner  -  7-step NLP-to-plan pipeline (Tab 24) | Tab 24 |
-| 17 | Batch Recipe Details Inspector | Inline |
-| 18 | Machine Inspector: Vessel detail cards (59 machines) | Tab 6 |
-
-### Dashboard Screenshots
-
-#### Home  -  Executive Overview & Headline KPIs
-
-Header bar confirms **Master™ AI Closed-Loop Optimization Platform · v11** (dated 2026-10-06). The sub-headline shows all dataset counters: 98,012 batch records, 57,133 dosed batches, 88,040 production report rows, 33.27 M kg, 97 machines, 97,655 telemetry logs (9.995 GB).
-
-![Master™ v11 manual hero: 88,040 rows  -  97 machines  -  97,655 logs  -  60.6 L/kg](docs/screenshots/manual_scr_hero.png)
-
-#### Command Bar, Bilingual NLP & Factory Colour Search (Ctrl+K)
-
-The spotlight command bar searches batches, colours, processes, machines, and tabs simultaneously. Shown with a live colour search  -  returns ERP cards, last batch date, Pantone code, recipe cost per kg, machine history, first-pass failure rate (21 %) and 17 recipes from the master. Bilingual toggle: **EN / বাংলা**.
-
-![Master™ v11  -  Ctrl+K colour search: Smoked Pearl  -  ERP cards, recipe cost ৳74, first-pass 21%](docs/screenshots/manual_scr_nlp.png)
-
-#### Home Dashboard  -  24 Tools, Role Selectors, Quick-Action Cards
-
-Home shows the role-based view selector (Everyone / Operator / Technologist / Manager), all 24 tools dropdown, and five primary action cards: Plan a batch, Follow a running batch, Check a colour's recipe, Compare machines, Look up a process.
-
-![Master™ v11 home: 24 tools dropdown open, role selector, quick-action cards](docs/screenshots/manual_scr_tabs.png)
-
-#### Tab 24  -  AI Batch Planner (8-step flow)
-
-8-step pipeline: 1 Order → 2 AI recipe & price → 3 Machine → 4 Program step by step → 5 Cost & what changes it → 6 Approve → 7 Run & decide → 8 Feedback. Steps derived from 2,090,337 program steps across 97,655 logged batches. Recipe cost error ৳4.2/kg median, batch time error 79 min median.
-
-![Master™ v11  -  Tab 24 Batch Planner: 8-step AI pipeline, Active Protocol 2201 Cotton Light, True RFT 89.8%, Water 56.6 L/kg](docs/screenshots/manual_scr_planner.png)
-
-#### Manual  -  Ch.6 Intelligent Alerts (30 alerts from logs + ERP cards)
-
-30 alerts computed from last 180 days of controller logs and ERP recipe cards. Sample alerts: 9 machines heating slowly (median rate ≥ 20 % below fleet); 6 processes with longest waits; 3 better-machine recommendations ($265 avoided/failed batch).
-
-![Master™ v11 manual Ch.6  -  30 Intelligent Alerts table: Machines heating slowly, Where the waiting is, Better machine, Recipe cost changed](docs/screenshots/manual_scr_chemistry.png)
-
-#### Manual  -  Dosing & Log Decoder Sandbox
-
-Interactive sandbox with real factory data: dosing curve simulator and live log-decoder workbench.
-
-![Master™ v11 manual  -  Interactive dosing sandbox and log decoder with factory data](docs/screenshots/manual_scr_dosing_calc.png)
-
-#### Tab 25  -  Connections Across the Data (Statistical Analysis)
-
-Statistical connections study across 47,403 verified batches (Aug 2025-Sep 2026): first-pass failure drivers, buyer risk, machine-memory OR, rework cost analysis.
-
-![Master™ v11  -  Tab 25 Connections study: first-pass failure analysis, buyer risk, machine memory effects](docs/screenshots/manual_scr_connections.png)
+*For complete methodology and audit details, see [`docs/Master_v11_Zero_to_One_Methodology.md`](docs/Master_v11_Zero_to_One_Methodology.md).*
 
 ---
 
-## 📚 Operator Manual v11  -  18 Chapters
+## 🔄 Closed-Loop Control Architecture & Validation Staircase
 
-The sealed companion manual (`Master™ v11  -  Zero-to-One Master Manual & Commercial Whitepaper`, **Doc ID: SM-MAN-V11-SKM-2026**, 0.81 MB) is embedded byte-exact inside the dashboard and SHA-256 verified at load time.
-
-| Chapter | Title |
-|---------|-------|
-| 1 | Executive Summary & Commercial Case |
-| 2 | The Data: 9.995 GB Master Export, Production Report & ERP Cards |
-| 3 | Role-Based Operating Guide (Operator / Technologist / Manager) |
-| 4 | Home and the Daily Routine (nine key KPI numbers) |
-| 5 | The Bar: Type an Order or a Question (Ctrl+K) |
-| 6 | Intelligent Alerts (30, from the logs and the ERP cards) |
-| 7 | Tab 24 Batch Planner, Section by Section |
-| 8 | Reactive Dyeing Chemistry and Dosing |
-| 9 | The Twin and the Models |
-| 10 | Troubleshooting on the Shop Floor |
-| 11 | Process Reference (logged programs) |
-| 12 | Prices and Rates (Tab 18 registry) |
-| 13 | Hardware and Roll-Out (implementation phases) |
-| 14 | Home and the 25 Tabs |
-| 15 | Operator Cheat-Sheets (English · বাংলা) |
-| 16 | FAQ and Glossary |
-| 17 | What Was Corrected in This Edition |
-| 18 | Connections Across the Data (Tab 25) |
-
-> The manual's ownership system matches the dashboard: same PBKDF2 verifier (same passcode unlocks both), print-disabled, anti-copy layer, and Provenance Audit Matrix.
-
----
-
-### Step 1  -  SCADA Telemetry Extraction & Table Splitting
-
-The raw proprietary data is a 9.995 GB binary-encoded industrial controller log. A resumable parallel extractor splits it into 12 typed relational tables:
-
-| Table | Description |
-|-------|-------------|
-| `t_Batch` | 98,012 total rows (57,133 dosed production batches) |
-| `t_BatchPrepProducts` | Chemical dosing records  -  decimal-point validation applied |
-| `t_BatchSteps` | Per-step execution log: temperature, time, function calls |
-| `t_BatchConsData` | Native water & steam pulse consumption (no external meter needed) |
-| `t_CfgBatchParams` | Controller config: max fabric 1,920 kg, DLR 5.5 L/kg |
-| `t_CfgConsumptions` | Consumption channel definitions |
-
-### Step 2  -  Ghost Batch Excision (Cost-Optimal AND-Logic)
-
-41.7 % of logged batches are maintenance cycles or sensor ghosts (alarm present, 0.0 g chemicals dosed). A cost-optimal cross-reference gate removes them before any model training:
-
-```python
-def is_production_batch(record) -> bool:
-    """
-    AND-logic gate: a batch must pass ALL checks.
-    Returns True only for verified physical production runs.
-    Cost-optimal dosage cutoff = 25 g:
-      - minimises FP cost ($150 shutdown) vs FN cost ($1,850 ruined fabric)
-      - automatically found by the ROC cost-minimisation optimizer
-    """
-    return record['total_chemical_weight_g'] > DOSAGE_CUTOFF_G  # 25 g
-
-# Result: 57,133 verified production batches from 98,012 total logs
-```
-
-Ghost batch confusion matrix (dosage cutoff = 25 g):
-
-| | Predicted: Ghost | Predicted: Real |
-|---|---|---|
-| **Actual: Ghost** | 40,771 TN | 108 FP |
-| **Actual: Real** | 547 FN | 56,586 TP |
-
-### Step 3  -  Feature Engineering
-
-21 raw inputs → 41 engineered features across six groups:
-
-```python
-FEATURE_GROUPS = {
-    'process':      ['fabric_kg', 'liquor_ratio', 'water_L', 'batch_time_min'],
-    'chemistry':    ['salt_g_kg', 'alkali_g_kg', 'dye_total_g_kg', 'cost_Tk_kg'],
-    'shade':        ['shade_depth_encoded', 'dye_class_encoded', 'colour_family_encoded'],
-    'temporal':     ['month_sin', 'month_cos', 'year_norm'],     # cyclic encoding
-    'interactions': ['salt_x_alkali', 'dye_x_water', 'shade_x_salt', 'shade_x_dye'],
-    'ratios':       ['salt_per_water', 'dye_per_fabric', 'water_efficiency_ratio'],
-}
-```
-
-### Step 4  -  Model Training & Stratified Validation
-
-```python
-MODELS = {
-    'Ridge':    RidgeCV(alphas=[0.1, 1.0, 10.0, 100.0]),
-    'RF':       RandomForestRegressor(n_estimators=300, max_depth=8, random_state=42),
-    'XGBoost':  XGBRegressor(n_estimators=500, learning_rate=0.05, max_depth=6),
-    'LightGBM': LGBMRegressor(n_estimators=500, learning_rate=0.05, num_leaves=63),
-}
-
-# Stratified 10-fold CV  -  preserving shade category proportions
-cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
-TARGETS = ['salt_g_kg', 'dye_total_g_kg', 'water_L_per_kg', 'cost_Tk_kg', 'alkali_g_kg']
-```
-
-### Step 5  -  V3 Chemical Tokeniser (Ingredient-Level Prediction)
-
-The V3 system goes one level deeper  -  predicting **individual chemical ingredient quantities** using an NLP-inspired tokeniser that treats chemical formulation as a vocabulary:
-
-```python
-class ChemicalTokenizer:
-    """
-    Treats each chemical ingredient as a token in a recipe 'vocabulary'.
-    Enables ingredient-level prediction across variable-length formulations.
-    Analogy: Word2Vec for chemistry  -  each ingredient is a word,
-    each recipe is a sentence, the quantity is the token weight.
-    """
-    def fit(self, recipes: list[dict]) -> None:
-        all_ingredients = set()
-        for recipe in recipes:
-            all_ingredients.update(recipe.keys())
-        self.vocab = {ing: idx for idx, ing in enumerate(sorted(all_ingredients))}
-
-    def transform(self, recipe: dict) -> np.ndarray:
-        vec = np.zeros(len(self.vocab), dtype=np.float32)
-        for ingredient, quantity in recipe.items():
-            if ingredient in self.vocab:
-                vec[self.vocab[ingredient]] = float(quantity)
-        return vec
-```
-
----
-
-## 🔄 Closed-Loop Control Architecture
-
-The AI optimizer feeds into a full closed-loop system. The complete technical review is in `docs/PLC_AI_ClosedLoop_Review_FINAL.md`.
+The platform interfaces with factory PLCs through a phased validation staircase:
 
 ```
 ┌──────────────────────────────────────────────────────────┐
@@ -377,8 +244,8 @@ The AI optimizer feeds into a full closed-loop system. The complete technical re
 ┌────────────────────────▼─────────────────────────────────┐
 │                    EDGE COMPUTE NODE                     │
 │  Batch Passport → Feature Engineering → AI Inference     │
-│  XGBoost/LightGBM recipe recommendation                  │
-│  SPC monitoring · Safety bounds enforcement              │
+│  Monotone GBDT recipe & duration recommendations         │
+│  SPC drift monitoring · Safety bounds enforcement        │
 └────────────────────────┬─────────────────────────────────┘
                          │ OPC-UA write (within SPC bounds)
 ┌────────────────────────▼─────────────────────────────────┐
@@ -387,320 +254,139 @@ The AI optimizer feeds into a full closed-loop system. The complete technical re
 └──────────────────────────────────────────────────────────┘
 ```
 
-**Validation staircase:**
+**Phased Validation Staircase:**
+- **Phase 1 — Retrospective Validation:** ✅ Complete (< 10 % MAPE on held-out data, beats human P25 benchmark).
+- **Phase 2 — Offline Master™ v11 Platform:** ✅ Complete (Dashboard v11, sealed manual v11, 45/45 tests pass).
+- **Phase 3 — Shadow Mode (Read-Only):** 🟡 In Progress (Advantech edge PC installed on Unit A pilot vessel).
+- **Phase 4 — Inline Sensor Pilot:** 🟡 Scheduled (Toroidal conductivity and flat-bulb pH probes).
+- **Phase 5 — Prospective A/B Field Trial:** 🟡 Scheduled (Randomised split between AI and standard cards).
+- **Phase 6 — Constrained Closed-Loop Writeback:** 🟡 Scheduled (OPC-UA setpoint adjustment bounded by IEC 61511).
 
-| Phase | Status | Description |
-|-------|--------|-------------|
-| Phase 1  -  Retrospective validation | ✅ Complete | < 10 % MAPE, beats P25 benchmark |
-| Phase 2  -  Shadow mode (read-only) | 🟡 Pending | Awaiting inline sensor installation |
-| Phase 3  -  Prospective A/B trial | 🟡 Pending | Requires Phase 2 completion |
-| Phase 4  -  Constrained closed-loop | 🟡 Pending | Requires OPC-UA gateway confirmation |
-
----
-
-## 🔗 Key Statistical Findings
-
-| Finding | Value | Method |
-|---------|-------|--------|
-| Salt half-saturation constant (Km) | 38.2 g/L | Michaelis-Menten regression |
-| Exhaustion ceiling (Vmax) | 83.7 % | Michaelis-Menten regression |
-| Shade taxonomy recovery (unsupervised) | **78.24 % accuracy** | K-Means, k = 4 |
-| Water variance explained by shade | η² = 0.142 (14.2 %) | Welch's ANOVA |
-| Machine failure variance (59 vessels) | η² = 0.324, F = 470.97 | One-way ANOVA, p < 1e-290 |
-| Predictive model CV R² | **0.847 ± 0.031** | 10-fold stratified CV |
-| First-pass failure rate model (AUC) | 0.703 (shade check: 0.707) | Logistic regression |
-| Machine-memory failure lift | OR 1.333 (95 % CI 1.21-1.47) | Logistic with fixed effects |
-| Water saved vs. open-loop baseline | ~5.6 % (60.6 L/kg vs 64-75 L/kg) | SCADA telemetry |
-| Ghost batch excision precision | 56,586 TP / 108 FP | Cost-optimal dosage gate |
+*For the complete 95,000-word review of industrial communication standards, see [`docs/PLC_AI_ClosedLoop_Review_FINAL.md`](docs/PLC_AI_ClosedLoop_Review_FINAL.md).*
 
 ---
 
-## 📁 Repository Contents
-
-| Path | Description |
-|------|-------------|
-| `02_data_science_analysis/` | Data ingestion, ghost-batch excision, extraction, ANOVA, clustering (Scripts 2-22) |
-| `03_AI_recipe_optimizer/` | Multi-model ML training, P25 benchmark validation, uncertainty bounds (Scripts 35-39) |
-| `04_AI_recipe_predictor_v3/` | NLP-inspired chemical tokeniser, ingredient-level recipe generation CLI |
-| `05_categorization_insights/` | 5-year deep root-cause analysis, permutation matrix, recipe intelligence |
-| `docs/` | Technical documentation and closed-loop control review (95 K words) |
-| `docs/screenshots/` | Dashboard manual screenshots (publicly available subset) |
-
-> **Note:** The proprietary SCADA dataset, raw CSV exports, and the interactive dashboard HTML are not included. The analytical pipeline is fully reproducible on equivalent industrial PLC controller data.
-
----
-
-## 🚀 Quick Start
-
-```bash
-git clone https://github.com/skmainuddin745-spec/AI-Closed-Loop-Dyeing-Bangladesh
-cd AI-Closed-Loop-Dyeing-Bangladesh
-pip install pandas numpy scikit-learn xgboost lightgbm matplotlib plotly python-docx
-
-# Run ghost-batch excision and extraction
-python 02_data_science_analysis/07_universal_extraction.py --input your_data.db
-
-# Train AI recipe optimizer
-python 03_AI_recipe_optimizer/35_ai_train_pipeline.py \
-  --data extracted_tables/ --output models/
-
-# Predict a recipe
-python 03_AI_recipe_optimizer/36_ai_predict.py \
-  --model models/xgboost_salt.pkl \
-  --shade "Medium Navy" --fabric-kg 250 --liquor-ratio 8
-
-# V3: ingredient-level prediction
-python 04_AI_recipe_predictor_v3/03_train_v3_formulator.py
-python 04_AI_recipe_predictor_v3/04_v3_recipe_generator_cli.py
-```
-
----
-
-## 📚 Documentation
-
-- [`docs/AI_Dyeing_Technical_Summary.md`](docs/AI_Dyeing_Technical_Summary.md)  -  Site baseline analysis and key metrics
-- [`docs/PLC_AI_ClosedLoop_Review_FINAL.md`](docs/PLC_AI_ClosedLoop_Review_FINAL.md)  -  Closed-loop control technical review (95 K words)
-- [`docs/AI_Dyeing_Inception_Report.md`](docs/AI_Dyeing_Inception_Report.md)  -  Project inception and design rationale
-- [`docs/000_AI_DYEING_HOME.md`](docs/000_AI_DYEING_HOME.md)  -  Project knowledge base home
-- [`docs/Deep_Analysis_Findings.md`](docs/Deep_Analysis_Findings.md)  -  Data integrity verification and audit findings
-- [`05_categorization_insights/`](05_categorization_insights/)  -  5-year deep root-cause analysis scripts
-- **Related:** [AI-Process-Analytics  -  Earlier Phase](https://github.com/skmainuddin745-spec)  -  Earlier statistical optimisation phase (660 batches)
-
----
-
-## ⚖️ Copyright & Confidentiality
-
-© 2024-2026 SK Mainuddin. All rights reserved.
-
-This repository contains original research, engineering, and software developed under a formal industrial research collaboration. The underlying proprietary SCADA dataset, raw telemetry, organizational details, and the interactive dashboard HTML are subject to confidentiality obligations and are not published. The code and documentation published here represent the independently-developed analytical pipeline, which is fully reproducible on equivalent industrial data.
-
----
-
-*Applied ML · Industrial AI · Process Optimisation · Data Engineering · SCADA Analytics · Bangladesh Textile · Closed-Loop Control · Python · XGBoost · LightGBM · ANOVA · Digital Twin*
-
-
----
-
-## Project Architecture
+## 📁 Repository Directory Structure
 
 ```
-AI-Driven Closed-Loop Dyeing System
+AI-Closed-Loop-Dyeing-Bangladesh/
+├── 02_data_science_analysis/           ← Data engineering, extraction & ANOVA (Scripts 02–22)
+│   ├── 02_trend_analysis.py            ← 6-year trend analysis (2021–2026)
+│   ├── 03_clustering_analysis.py       ← K-Means batch clustering
+│   ├── 07_universal_extraction.py      ← Parallel binary SCADA table extraction
+│   ├── 08_resumable_extraction.py      ← Fault-tolerant extraction with checkpointing
+│   ├── 18_surgical_rescue_653.py       ← Surgical rescue of 21 misplaced decimal errors
+│   └── 22_multi_dim_categorization.py  ← Multi-dimensional categorisation engine
 │
-├── LAYER 1: Data Ingestion & Preprocessing
-│   └── 02_data_science_analysis/   ← Validated dataset ingestion and quality pipeline
+├── 03_AI_recipe_optimizer/             ← Machine learning training & validation (Scripts 35–39)
+│   ├── 35_ai_train_pipeline.py         ← Full ML training: Ridge/RF/XGBoost/LightGBM
+│   ├── 35b_ai_retrain_stratified.py    ← Stratified retraining by shade proportion
+│   ├── 36_ai_predict.py                ← Interactive prediction CLI
+│   ├── 37_p25_benchmark_validation.py  ← Human P25 best-quartile benchmark evaluation
+│   ├── 38_ai_v2_advanced_training.py   ← Advanced feature engineering & interaction terms
+│   └── 39_ai_v2_predict_enhanced.py    ← Enhanced prediction with uncertainty bounds
 │
-├── LAYER 2: Data Science Pipeline (Scripts 02-22)
-│   ├── 02_trend_analysis.py           ← Year-on-year trend analysis (2021-2026)
-│   ├── 03_clustering_analysis.py      ← K-Means batch clustering
-│   ├── 04-06: metadata fix + permutation analysis
-│   ├── 07_universal_extraction.py     ← Resumable parallel extraction
-│   ├── 08_resumable_extraction.py     ← Fault-tolerant extraction with checkpointing
-│   ├── 09-15: audit, rescue, final statistics
-│   ├── 16-19: dropped batch analysis + surgical rescue of anomalous records
-│   └── 22: multi-dimensional categorisation
+├── 04_AI_recipe_predictor_v3/          ← Chemical Tokenizer & Ingredient Formulation
+│   ├── 01_chemical_tokenizer.py        ← NLP-inspired chemical ingredient tokenizer
+│   ├── 02_build_v3_dataset.py          ← V3 dataset with chemical fingerprints
+│   ├── 03_train_v3_formulator.py       ← Chemical-aware model training
+│   └── 04_v3_recipe_generator_cli.py   ← CLI for ingredient-level recipe formulation
 │
-├── LAYER 3: Categorisation & Intelligence (Scripts 23-34)
-│   ├── 23-27: HTML dashboards, permutation charts, month-wise analysis
-│   ├── 28: full in-depth analysis dashboard (2021-2026)
-│   ├── 29_deep_root_analysis.py       ← FLAGSHIP: 5-year deep causal analysis
-│   ├── 30: master batch dataset export
-│   ├── 31: pricing + recipe deep analysis
-│   └── 32-34: recipe intelligence dashboard, findings report, DOCX report
+├── 05_categorization_insights/         ← 5-Year Deep Root Analysis & Commercial Reports
+│   ├── 28_full_indepth_analysis_dashboard.py
+│   ├── 29_deep_root_analysis.py        ← Flagship 5-year deep causal analysis
+│   ├── 30_export_master_batch_dataset.py
+│   ├── 31_pricing_recipe_deep_analysis.py
+│   └── 34_findings_v2_docx_report.py
 │
-├── LAYER 4: AI Recipe Optimizer v1/v2 (Scripts 35-39)
-│   ├── 35_ai_train_pipeline.py        ← Full ML training: Ridge/RF/XGBoost/LightGBM
-│   ├── 35b_ai_retrain_stratified.py   ← Stratified retraining
-│   ├── 36_ai_predict.py               ← Interactive prediction CLI
-│   ├── 37_p25_benchmark_validation.py ← Validated against P25 (best-quartile operator)
-│   ├── 38_ai_v2_advanced_training.py  ← v2: advanced feature engineering
-│   └── 39_ai_v2_predict_enhanced.py   ← v2: enhanced prediction with uncertainty bounds
+├── docs/                               ← Comprehensive Technical & Empirical Documentation
+│   ├── 000_AI_DYEING_HOME.md           ← Knowledge base Map of Content
+│   ├── Master_v11_Analytics_and_Accuracy_Report.md  ← Full accuracy specification (Ch. 19)
+│   ├── Data_Connections_and_Causal_Inference_Study.md ← Tab 25 causal analysis (Ch. 18)
+│   ├── Master_v11_Zero_to_One_Methodology.md         ← Zero-to-one methodology & audit matrix
+│   ├── Deep_Analysis_Findings.md       ← Forensic SCADA audit & decimal rescue
+│   ├── AI_Dyeing_Technical_Summary.md  ← Site baseline & 2026 industrial economics
+│   ├── PLC_AI_ClosedLoop_Review_FINAL.md ← 95K-word closed-loop technical review
+│   ├── AI_Dyeing_Inception_Report.md   ← Project inception & PRISMA 2020 foundation
+│   └── screenshots/                    ← Verified Master™ v11 interface screenshots
 │
-└── LAYER 5: V3 Ultimate Formulator (Chemical Tokenisation)
-    ├── 01_chemical_tokenizer.py        ← NLP-inspired chemical ingredient tokeniser
-    ├── 02_build_v3_dataset.py          ← V3 dataset with chemical fingerprints
-    ├── 03_train_v3_formulator.py       ← V3 training with chemical-aware features
-    └── 04_v3_recipe_generator_cli.py   ← CLI: predict full recipe at ingredient level
+├── .gitignore                          ← Enforces confidentiality of proprietary raw SCADA
+├── LICENSE                             ← Proprietary rights & intellectual property terms
+└── README.md                           ← Primary system specification (this file)
 ```
 
 ---
 
-## Data Pipeline  -  From Industrial Dataset to AI Prediction
+## 🚀 Quick Start & CLI Execution
 
-### Step 1: Data Acquisition
-
-Production batch records were collected from an industrial textile dyeing partner facility in Bangladesh under a formal research collaboration agreement (an applied industrial research consortium / applied industrial research project. The dataset covers multiple production units over a 5-year operational window (2021-2026).
-
-**Each batch record contains:**
-- Fabric type, GSM (grams per square metre), fabric weight (kg)
-- Reactive dye quantities (g/kg)  -  multiple dye components per batch
-- Salt loading (g/kg), alkali loading (g/kg), total chemical cost (Tk/kg)
-- Water intensity (L/kg), machine ID, liquor ratio, process date
-
-> **Note:** The proprietary batch dataset is not included in this repository per the industrial collaboration agreement. The complete analytical pipeline is fully reproducible on equivalent industrial dyeing data.
-
-### Step 2: Data Ingestion & Validation
-
-`02_data_science_analysis/` processes the collected records through a rigorous quality pipeline:
-
-```python
-def validate_batch(record: dict) -> tuple[bool, str]:
-    """
-    Multi-criterion validation gate for a single production batch.
-
-    Returns (is_valid, rejection_reason). A record must pass ALL checks
-    to be included in training data  -  conservative AND-logic throughout.
-    """
-    # Physical bounds check
-    if not (0 < record['fabric_kg'] < 5000):
-        return False, "fabric_kg out of physical bounds"
-    if not (0 < record['salt_g_kg'] < 200):
-        return False, "salt_g_kg exceeds physical maximum"
-    if not (record['liquor_ratio'] in VALID_LIQUOR_RATIOS):
-        return False, "liquor_ratio not a standard value"
-
-    # Cross-field consistency
-    salt_total = record['salt_g_kg'] * record['fabric_kg'] / 1000
-    if abs(salt_total - record['salt_total_kg']) > TOLERANCE_KG:
-        return False, "salt total inconsistent with per-kg value"
-
-    return True, "PASS"
-```
-
-**Pipeline audit trail (428 validated batches):**
-
-| Script | Records In | Records Out | Rejection Reason |
-|--------|-----------|-------------|-----------------|
-| Raw collection | 523 | 523 |  -  |
-| Physical bounds filter | 523 | 498 | 25 meter-drop-outs / data entry errors |
-| Cross-field consistency | 498 | 471 | 27 total/per-kg inconsistencies |
-| Recipe target link | 471 | 428 | 43 missing master recipe (Theo ≤ 0) |
-| **Final validated dataset** | **428** | **428** | All pass |
-
-### Step 3: Feature Engineering
-
-`feature_engineering.py` transforms 21 raw inputs into 41 engineered features:
-
-```python
-FEATURE_GROUPS = {
-    'process': ['fabric_kg', 'liquor_ratio', 'water_L', 'batch_time_min'],
-    'chemistry': ['salt_g_kg', 'alkali_g_kg', 'dye_total_g_kg', 'cost_Tk_kg'],
-    'shade': ['shade_depth_encoded', 'dye_class_encoded', 'colour_family_encoded'],
-    'temporal': ['month_sin', 'month_cos', 'year_norm'],
-    'interactions': [
-        'salt_x_alkali', 'dye_x_water', 'salt_x_liquor_ratio',
-        'alkali_x_temp', 'shade_x_salt', 'shade_x_dye'
-    ],
-    'ratios': [
-        'salt_per_water', 'dye_per_fabric', 'cost_per_water',
-        'chemical_load_total', 'water_efficiency_ratio'
-    ]
-}
-```
-
-### Step 4: Model Training & Validation
-
-```python
-MODELS = {
-    'Ridge':    RidgeCV(alphas=[0.1, 1.0, 10.0, 100.0]),
-    'RF':       RandomForestRegressor(n_estimators=300, max_depth=8, random_state=42),
-    'XGBoost':  XGBRegressor(n_estimators=500, learning_rate=0.05, max_depth=6),
-    'LightGBM': LGBMRegressor(n_estimators=500, learning_rate=0.05, num_leaves=63),
-}
-
-# Stratified 10-fold CV  -  preserving shade category proportions
-cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
-
-# Target KPIs
-TARGETS = ['salt_g_kg', 'dye_total_g_kg', 'water_L_per_kg', 'cost_Tk_kg', 'alkali_g_kg']
-```
-
----
-
-## Model Performance  -  vs. P25 Benchmark
-
-The P25 benchmark is the 25th percentile of the best-quartile human operator performance across all 428 validated batches. A model that beats P25 is performing better than the best 25% of human expert decisions.
-
-| KPI | Open-Loop Baseline | AI Model (XGBoost) | P25 Benchmark | AI vs P25 |
-|-----|-------------------|-------------------|--------------|-----------|
-| Salt (g/kg) | 68.2 ± 14.3 | **MAPE 7.8%** | 62.4 | ✅ Beats |
-| Dye total (g/kg) | 24.1 ± 8.7 | **MAPE 9.1%** | 22.8 | ✅ Beats |
-| Water (L/kg) | 82.4 ± 31.2 | **MAPE 8.4%** | 71.3 | ✅ Beats |
-| Chemical cost (Tk/kg) | 58.7 ± 19.4 | **MAPE 6.9%** | 53.2 | ✅ Beats |
-| Alkali (g/kg) | 14.8 ± 4.2 | **MAPE 9.7%** | 13.6 | ✅ Beats |
-
-**All five KPIs achieve < 10% MAPE and beat the P25 benchmark.**
-
----
-
-## Closed-Loop Control Architecture
-
-The AI Recipe Optimizer feeds into a full closed-loop system (see `docs/PLC_AI_ClosedLoop_Review_FINAL.md` for the 95K-word technical review):
-
-```
-┌──────────────────────────────────────────────────────────┐
-│                    INLINE SENSORS                         │
-│   pH probe · Conductivity · Spectrophotometer · PT100    │
-└────────────────────────┬─────────────────────────────────┘
-                         │ Modbus RTU (RS-485)
-┌────────────────────────▼─────────────────────────────────┐
-│                   EDGE COMPUTE NODE                       │
-│   Batch Passport → Feature Engineering → AI Inference    │
-│   XGBoost/LightGBM recipe recommendation                 │
-│   SPC monitoring · Safety bounds enforcement             │
-└────────────────────────┬─────────────────────────────────┘
-                         │ OPC UA write (within SPC bounds)
-┌────────────────────────▼─────────────────────────────────┐
-│              PROCESS CONTROLLER (SETEX E390)              │
-│   Recipe execution → Setpoint adjustment → HMI alert     │
-└──────────────────────────────────────────────────────────┘
-```
-
-**Validation staircase status:**
-
-| Phase | Status | Description |
-|-------|--------|-------------|
-| Phase 1  -  Retrospective validation | ✅ Complete | < 10% MAPE on held-out data, beats P25 |
-| Phase 2  -  Shadow mode (read-only) | 🟡 Pending | Unit A pilot  -  awaiting sensor installation |
-| Phase 3  -  Prospective A/B trial | 🟡 Pending | Requires Phase 2 completion |
-| Phase 4  -  Constrained closed-loop | 🟡 Pending | Requires vendor OPC UA gateway confirmation |
-
----
-
-## Quick Start
-
+### 1. Environment Setup
 ```bash
 # Clone the repository
-git clone https://github.com/skmainuddin745-spec/AI-Closed-Loop-Dyeing-Bangladesh
+git clone https://github.com/skmainuddin745-spec/AI-Closed-Loop-Dyeing-Bangladesh.git
 cd AI-Closed-Loop-Dyeing-Bangladesh
 
-# Install dependencies
-pip install -r requirements.txt
+# Create virtual environment and install dependencies
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install numpy pandas scikit-learn xgboost lightgbm matplotlib plotly python-docx
+```
 
-# Train models on your own equivalent dataset
-python 02_data_science_analysis/35_ai_train_pipeline.py \
-  --data your_batch_data.csv \
+### 2. Run Data Engineering & Decimal Rescue
+```bash
+# Execute universal extraction on equivalent relational database
+python 02_data_science_analysis/07_universal_extraction.py --input your_data.db
+
+# Run surgical decimal repair on chemical dispensing table
+python 02_data_science_analysis/18_surgical_rescue_653.py
+```
+
+### 3. Train AI Recipe Optimizer Pipeline
+```bash
+# Train Ridge / RF / XGBoost / LightGBM ensemble
+python 03_AI_recipe_optimizer/35_ai_train_pipeline.py \
+  --data extracted_tables/ \
   --output models/
 
-# Make a recipe prediction
-python 02_data_science_analysis/36_ai_predict.py \
+# Retrain with stratified shade-category folds
+python 03_AI_recipe_optimizer/35b_ai_retrain_stratified.py
+```
+
+### 4. Interactive Recipe Prediction
+```bash
+# Make interactive recipe prediction
+python 03_AI_recipe_optimizer/36_ai_predict.py \
   --model models/xgboost_salt.pkl \
   --shade "Medium Navy" \
-  --fabric-kg 250 \
-  --liquor-ratio 8
+  --fabric-kg 450 \
+  --liquor-ratio 6.0
+```
+
+### 5. Ingredient-Level Formulation (V3 Chemical Tokenizer)
+```bash
+# Train chemical-aware tokenizer
+python 04_AI_recipe_predictor_v3/03_train_v3_formulator.py
+
+# Generate complete recipe at ingredient level
+python 04_AI_recipe_predictor_v3/04_v3_recipe_generator_cli.py \
+  --shade "Dark Charcoal" \
+  --fabric-kg 600 \
+  --dye-class "Vinyl Sulphone"
 ```
 
 ---
 
-## 📚 References & Documentation
+## ⚖️ Intellectual Property, Copyright & Confidentiality
 
-- [docs/AI_Dyeing_Technical_Summary.md](docs/AI_Dyeing_Technical_Summary.md)  -  Site baseline analysis and key metrics
-- [docs/PLC_AI_ClosedLoop_Review_FINAL.md](docs/PLC_AI_ClosedLoop_Review_FINAL.md)  -  95K-word closed-loop control technical review
-- [docs/AI_Dyeing_Inception_Report.md](docs/AI_Dyeing_Inception_Report.md)  -  Project inception and design rationale
-- [docs/000_AI_DYEING_HOME.md](docs/000_AI_DYEING_HOME.md)  -  Project knowledge base home
-- [docs/Deep_Analysis_Findings.md](docs/Deep_Analysis_Findings.md)  -  Data integrity verification findings
-- [05_categorization_insights/README_DEEP_ROOT_ANALYSIS.md](05_categorization_insights/README_DEEP_ROOT_ANALYSIS.md)  -  5-year deep root-cause analysis
-- Related: [AI-Process-Analytics (Earlier Phase)](https://github.com/skmainuddin745-spec)  -  Statistical optimisation suite (660 batches)
+**Author & Copyright Holder:** **SK. MAINUDDIN**  
+**Contact:** [sk.mainuddin745@gmail.com](mailto:sk.mainuddin745@gmail.com) · [LinkedIn](https://www.linkedin.com/in/sk-mainuddin/) · +8801521231450  
+
+### Legal Framework
+- **Bangladesh:** Protected under the **Copyright Act 2023 of Bangladesh (Act No. XXXIV of 2023)**. Copyright subsists automatically upon fixation in tangible form.
+- **International:** Protected internationally under the **Berne Convention for the Protection of Literary and Artistic Works** (Bangladesh party since 4 May 1999) and the **WTO Agreement on Trade-Related Aspects of Intellectual Property Rights (TRIPS)** (since 1 January 1995).
+- **Scope of Protection:** All software architecture, model algorithms, feature engineering pipelines, user interface code, data analyses, documentation, and the Master™ visual presentation are original works of the author.
+
+### Confidentiality Notice
+The underlying proprietary SCADA dataset, raw controller telemetry, factory identity, and the standalone dashboard HTML application (`Ultimate_Master_Analytics_Dashboard_v11.html`) are subject to confidentiality obligations under a formal industrial research collaboration agreement and are not published. The code, analytical pipelines, and documentation published in this repository represent the independently developed analytical platform, which is fully reproducible on equivalent industrial PLC controller datasets.
 
 ---
-
-*Applied ML · Industrial AI · Bangladesh Textile · Closed-Loop Control · Process Optimisation · Python · XGBoost · LightGBM*
+*© 2024–2026 SK. MAINUDDIN. All Rights Reserved. Master™ Closed-Loop Dyeing Intelligence.*

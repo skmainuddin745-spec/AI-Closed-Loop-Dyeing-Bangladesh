@@ -1,9 +1,9 @@
-﻿# PLC-Mediated AI Closed-Loop Control for Reactive Dyeing: A Critical Review of Industrial Communication Architectures, Sensor-Validation Protocols, and the Unresolved Integration Gap in Developing-Country Dyehouses
+# PLC-Mediated AI Closed-Loop Control for Reactive Dyeing: A Critical Review of Industrial Communication Architectures, Sensor-Validation Protocols, and the Unresolved Integration Gap in Developing-Country Dyehouses
 
 **Target journal:** *Journal of Cleaner Production* / *Computers & Chemical Engineering* / *Expert Systems with Applications* (Q1, Elsevier)  
 **Authors:** SK Mainuddin¹, [Co-author(s)]¹  
 **Affiliation:** Applied Industrial Research Programme, Bangladesh
-**Corresponding author e-mail:** [pending]  
+**Corresponding author e-mail:** sk.mainuddin745@gmail.com  
 **Keywords:** Programmable Logic Controller; OPC UA; Reactive dyeing; Closed-loop control; Industry 4.0; Bangladesh textile; Reinforcement learning; Inline sensing; pH; Conductivity; Spectrophotometry; Edge computing; Right-First-Time; Cyber-physical system; Digital twin; MLOps
 
 ---

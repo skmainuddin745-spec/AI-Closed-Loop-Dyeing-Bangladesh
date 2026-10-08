@@ -1,4 +1,4 @@
-﻿---
+---
 project: AI Closed-Loop Dyeing
 status: draft
 type: technical
@@ -11,8 +11,8 @@ home: "[000_AI_DYEING_HOME](../docs/000_AI_DYEING_HOME.md)"
 
 **Project Title:** An AI-Driven Closed-Loop Process Control System for Optimizing Resource Consumption in Knit Fabric Dyeing  
 **Project Lead:** Research Supervisor (Department of Textile Engineering)  
-**Research Assistant:** SK Mainuddin  
-**Research type: Applied industrial research
+**Lead Researcher / Engineer:** SK Mainuddin (sk.mainuddin745@gmail.com)  
+**Research Type:** Applied Industrial Research (Export Wet Processing Sector)
 
 ## 1. Executive Summary
 
